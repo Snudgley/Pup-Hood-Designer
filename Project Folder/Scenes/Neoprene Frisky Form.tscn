@@ -1,0 +1,731 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Textures/Frisky/NEO650C Frisky Order Form 1.6.22.png" type="Texture" id=1]
+[ext_resource path="res://Materials/Decrypt Image Neoprene.material" type="Material" id=2]
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Textures/Frisky/LowResFriskyForm.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/Barlow/Barlow-Medium.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Assets/Form TickBox.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Scripts/Sizing Popup.gd" type="Script" id=44]
+[ext_resource path="res://Scenes/Neo Colour Selector.tscn" type="PackedScene" id=62]
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="ButtonGroup" id=47]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=78]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=79]
+size = 61
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 48
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxEmpty" id=58]
+
+[sub_resource type="StyleBoxEmpty" id=59]
+
+[sub_resource type="StyleBoxFlat" id=60]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=55]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=56]
+
+[sub_resource type="Theme" id=61]
+default_font = SubResource( 51 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 51 )
+Button/styles/disabled = SubResource( 58 )
+Button/styles/focus = SubResource( 59 )
+Button/styles/hover = SubResource( 60 )
+Button/styles/normal = SubResource( 55 )
+Button/styles/pressed = SubResource( 56 )
+
+[sub_resource type="ButtonGroup" id=57]
+
+[sub_resource type="ButtonGroup" id=48]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=50]
+content_margin_left = 40.0
+content_margin_right = 40.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0.376471, 0.376471, 0.376471, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="DynamicFont" id=49]
+size = 60
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxEmpty" id=52]
+
+[sub_resource type="StyleBoxFlat" id=64]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Neoprene Frisky Form" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = ExtResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 4400.0
+margin_bottom = 3400.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+
+[node name="Preview Colour Selector" parent="TextureRect" instance=ExtResource( 3 )]
+texture = ExtResource( 4 )
+
+[node name="Control10" parent="TextureRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 410.0
+margin_top = 681.0
+margin_right = 502.0
+margin_bottom = 773.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 47 )
+catagory = "Hood Size"
+
+[node name="Control11" parent="TextureRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 410.0
+margin_top = 803.0
+margin_right = 502.0
+margin_bottom = 895.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+pressed = true
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 1
+
+[node name="Control12" parent="TextureRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 411.0
+margin_top = 927.0
+margin_right = 503.0
+margin_bottom = 1019.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 2
+
+[node name="Control13" parent="TextureRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 862.0
+margin_top = 680.0
+margin_right = 954.0
+margin_bottom = 772.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 3
+
+[node name="Control14" parent="TextureRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 862.0
+margin_top = 801.0
+margin_right = 954.0
+margin_bottom = 893.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 4
+
+[node name="Control15" parent="TextureRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 198.0
+margin_top = 1108.0
+margin_right = 290.0
+margin_bottom = 1200.0
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 78 )
+catagory = "Eyeglass Slots"
+
+[node name="Control16" parent="TextureRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1089.0
+margin_top = 1108.0
+margin_right = 1181.0
+margin_bottom = 1200.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 78 )
+custom_styles/normal = SubResource( 4 )
+catagory = "Ear Holes"
+
+[node name="Colour selection" parent="TextureRect" groups=["1_2 Selection", "Base", "Colour Selection Button"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 1321.0
+margin_right = 1316.0
+margin_bottom = 1415.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+text = "Shiny"
+node_group = "Base"
+
+[node name="Colour selection2" parent="TextureRect" groups=["1_2 Selection", "Colour Selection Button", "CrownNeck"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 1440.0
+margin_right = 1316.0
+margin_bottom = 1534.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+text = "Shiny"
+node_group = "CrownNeck"
+
+[node name="Colour selection3" parent="TextureRect" groups=["Brow", "Colour Selection Button"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 1563.0
+margin_right = 1316.0
+margin_bottom = 1657.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+node_group = "Brow"
+
+[node name="Colour selection4" parent="TextureRect" groups=["Bridge", "Colour Selection Button"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 1930.0
+margin_right = 1316.0
+margin_bottom = 2024.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+node_group = "Bridge"
+
+[node name="Colour selection5" parent="TextureRect" groups=["Colour Selection Button", "Nose"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 1685.0
+margin_right = 1316.0
+margin_bottom = 1779.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+text = "Shiny"
+node_group = "Nose"
+
+[node name="Colour selection6" parent="TextureRect" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 1808.0
+margin_right = 1316.0
+margin_bottom = 1902.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+node_group = "Muzzle"
+
+[node name="Colour selection7" parent="TextureRect" groups=["Colour Selection Button", "Lip"] instance=ExtResource( 62 )]
+margin_left = 916.0
+margin_top = 2051.0
+margin_right = 1316.0
+margin_bottom = 2145.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 79 )
+node_group = "Lip"
+
+[node name="Colour selection9" parent="TextureRect" groups=["Colour Selection Button", "Ear A"] instance=ExtResource( 62 )]
+margin_left = 883.0
+margin_top = 2293.0
+margin_right = 1333.0
+margin_bottom = 2367.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 61 )
+custom_fonts/font = SubResource( 79 )
+node_group = "Ear A"
+
+[node name="Colour selection10" parent="TextureRect" groups=["Colour Selection Button", "Ear B"] instance=ExtResource( 62 )]
+margin_left = 891.0
+margin_top = 2406.0
+margin_right = 1341.0
+margin_bottom = 2480.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 61 )
+custom_fonts/font = SubResource( 79 )
+text = "Shiny"
+node_group = "Ear B"
+
+[node name="Colour selection11" parent="TextureRect" groups=["Colour Selection Button", "Ear C"] instance=ExtResource( 62 )]
+margin_left = 891.0
+margin_top = 2516.0
+margin_right = 1341.0
+margin_bottom = 2590.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 61 )
+custom_fonts/font = SubResource( 79 )
+text = "Shiny"
+node_group = "Ear C"
+
+[node name="Colour selection12" parent="TextureRect" groups=["Colour Selection Button", "Jowl Colour"] instance=ExtResource( 62 )]
+margin_left = 891.0
+margin_top = 2750.0
+margin_right = 1341.0
+margin_bottom = 2824.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 61 )
+custom_fonts/font = SubResource( 79 )
+node_group = "Jowl Colour"
+
+[node name="Control20" parent="TextureRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3770.0
+margin_top = 3055.0
+margin_right = 3862.0
+margin_bottom = 3147.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 57 )
+catagory = "Brow Style"
+
+[node name="Control21" parent="TextureRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3297.0
+margin_top = 3055.0
+margin_right = 3389.0
+margin_bottom = 3147.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+pressed = true
+group = SubResource( 57 )
+catagory = "Brow Style"
+button_index = 1
+
+[node name="Control22" parent="TextureRect" groups=["Ear Style"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1988.0
+margin_top = 1977.0
+margin_right = 2080.0
+margin_bottom = 2070.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+pressed = true
+group = SubResource( 48 )
+catagory = "Ear Style"
+
+[node name="Control23" parent="TextureRect" groups=["Ear Style"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2704.0
+margin_top = 1977.0
+margin_right = 2796.0
+margin_bottom = 2070.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 48 )
+catagory = "Ear Style"
+button_index = 1
+
+[node name="Control24" parent="TextureRect" groups=["Ear Style"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3484.0
+margin_top = 1977.0
+margin_right = 3576.0
+margin_bottom = 2070.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+group = SubResource( 48 )
+catagory = "Ear Style"
+button_index = 2
+
+[node name="Control25" parent="TextureRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1976.0
+margin_top = 3055.0
+margin_right = 2068.0
+margin_bottom = 3147.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+catagory = "Jowl"
+
+[node name="Eyelets" parent="TextureRect" groups=["Eyelets", "Frisky"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2501.0
+margin_top = 3055.0
+margin_right = 2593.0
+margin_bottom = 3147.0
+size_flags_horizontal = 1
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 42 )
+catagory = "Muzzle Detail B"
+button_index = 1
+
+[node name="4 Holes" parent="TextureRect" groups=["4 Holes", "Frisky"] instance=ExtResource( 43 )]
+visible = false
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2501.0
+margin_top = 3055.0
+margin_right = 2593.0
+margin_bottom = 3147.0
+size_flags_horizontal = 1
+custom_styles/hover = SubResource( 41 )
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 41 )
+catagory = "Muzzle Detail B"
+button_index = 4
+
+[node name="Control" type="Control" parent="TextureRect"]
+margin_left = 831.0
+margin_top = 927.0
+margin_right = 1626.0
+margin_bottom = 1040.0
+
+[node name="Sizing Popup" type="PanelContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 863.0
+margin_top = 927.0
+margin_right = 886.0
+margin_bottom = 1159.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 50 )
+script = ExtResource( 44 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sizing Popup"]
+margin_left = 40.0
+margin_top = 10.0
+margin_right = 1475.0
+margin_bottom = 686.0
+mouse_filter = 2
+custom_constants/separation = 44
+
+[node name="HBoxContainer" type="VBoxContainer" parent="Sizing Popup/HBoxContainer"]
+margin_right = 248.0
+margin_bottom = 676.0
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_right = 248.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = " "
+valign = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_top = 111.0
+margin_right = 248.0
+margin_bottom = 121.0
+mouse_filter = 2
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 52 )
+
+[node name="Label3" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_top = 125.0
+margin_right = 248.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Small"
+valign = 1
+
+[node name="Label4" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_top = 236.0
+margin_right = 248.0
+margin_bottom = 343.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Medium	"
+valign = 1
+
+[node name="Label5" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_top = 347.0
+margin_right = 248.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Large	"
+valign = 1
+
+[node name="Label6" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_top = 458.0
+margin_right = 248.0
+margin_bottom = 565.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "X-Large	"
+valign = 1
+
+[node name="Label7" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer"]
+margin_top = 569.0
+margin_right = 248.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "XX-Large	"
+valign = 1
+
+[node name="HBoxContainer2" type="VBoxContainer" parent="Sizing Popup/HBoxContainer"]
+margin_left = 292.0
+margin_right = 961.0
+margin_bottom = 676.0
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_right = 669.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Brow Circumference	"
+valign = 1
+
+[node name="HSeparator" type="HSeparator" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_top = 111.0
+margin_right = 669.0
+margin_bottom = 121.0
+mouse_filter = 2
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 64 )
+
+[node name="Label3" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_top = 125.0
+margin_right = 669.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "21\" - 22\" (53 cm - 56 cm)"
+valign = 1
+
+[node name="Label4" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_top = 236.0
+margin_right = 669.0
+margin_bottom = 343.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "22\" - 23\" (56 cm - 58.5 cm)"
+valign = 1
+
+[node name="Label5" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_top = 347.0
+margin_right = 669.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "23\" - 24\" (59 cm - 61 cm)"
+valign = 1
+
+[node name="Label6" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_top = 458.0
+margin_right = 669.0
+margin_bottom = 565.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "24\" - 25\" (61 cm - 63.5 cm)"
+valign = 1
+
+[node name="Label7" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer2"]
+margin_top = 569.0
+margin_right = 669.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "25\" - 26\" (63.5 cm - 66 cm)"
+valign = 1
+
+[node name="HBoxContainer3" type="VBoxContainer" parent="Sizing Popup/HBoxContainer"]
+margin_left = 1005.0
+margin_right = 1435.0
+margin_bottom = 676.0
+mouse_filter = 2
+
+[node name="Label2" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_right = 430.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "Chin Over Crown"
+valign = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_top = 111.0
+margin_right = 430.0
+margin_bottom = 121.0
+mouse_filter = 2
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 64 )
+
+[node name="Label3" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_top = 125.0
+margin_right = 430.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "25\" (63.5 cm)"
+valign = 1
+
+[node name="Label4" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_top = 236.0
+margin_right = 430.0
+margin_bottom = 343.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "26\" (66 cm)"
+valign = 1
+
+[node name="Label5" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_top = 347.0
+margin_right = 430.0
+margin_bottom = 454.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "27\" (69 cm)"
+valign = 1
+
+[node name="Label6" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_top = 458.0
+margin_right = 430.0
+margin_bottom = 565.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "28\" (71 cm)"
+valign = 1
+
+[node name="Label7" type="Label" parent="Sizing Popup/HBoxContainer/HBoxContainer3"]
+margin_top = 569.0
+margin_right = 430.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 0, 107 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 49 )
+text = "29\" (74 cm)"
+valign = 1
+
+[connection signal="mouse_entered" from="TextureRect/Control" to="Sizing Popup" method="_on_Label_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect/Control" to="Sizing Popup" method="_on_Label_mouse_exited"]

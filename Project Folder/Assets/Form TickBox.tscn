@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Form TickBox.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[node name="Form TickBox" type="Button" groups=["Hood Option Button"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -4308.0
+margin_bottom = -3308.0
+rect_min_size = Vector2( 92, 92 )
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = true
+script = ExtResource( 1 )
+
+[connection signal="toggled" from="." to="." method="_on_Form_TickBox_toggled"]

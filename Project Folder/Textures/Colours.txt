@@ -1,0 +1,16 @@
+opacity 33.3
+base		 0	0	0	0
+crown 		40	26	24	-16
+brow		54	50	48	-6
+bridge		66	70	72	6
+nose		80	94	96	16
+muzzle		120	120	120	0
+lip		160	146	144	-16
+chin		174	168	168	-6
+chin inner		186	190	192	6
+tongue		200	214	216	16
+ear outside	240	240	240	0
+ear edge		280	266	264	-16
+ear inside		294	288	288	-6
+jowl		306	310	312	6
+muzzle detail b	320	334	336	16

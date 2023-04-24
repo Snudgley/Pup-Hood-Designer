@@ -1,0 +1,2525 @@
+[gd_scene load_steps=204 format=2]
+
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/Barlow/Barlow-Medium.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Materials/Designer Colour Picker.theme" type="Theme" id=3]
+[ext_resource path="res://Materials/Decrypt Image Neoprene.material" type="Material" id=4]
+[ext_resource path="res://Textures/Muzzle/K9/Muzzle Standard.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Muzzle/Preview_Base.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Muzzle/K9/Eyelets Standard.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Neo Colour Selector.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Textures/Muzzle/Frisky/Eyelets.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Muzzle/K9/Muzzle Short.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Option Selector.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/Neo Muzzle Selector.gd" type="Script" id=12]
+[ext_resource path="res://Fonts/Barlow/Barlow-SemiBold.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Textures/Muzzle/K9/Whiskers Standard.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Muzzle/K9/Whiskers Short.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Muzzle/K9/Fur Standard.png" type="Texture" id=16]
+[ext_resource path="res://Fonts/Barlow/Barlow-ExtraBold.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Textures/Muzzle/K9/Eyelets Short.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Muzzle/K9/7 Holes Long.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Muzzle/K9/Whiskers Long.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Muzzle/K9/Fur Long.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Muzzle/K9/7 Holes Standard.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Muzzle/Frisky/Muzzle.png" type="Texture" id=23]
+[ext_resource path="res://Textures/Muzzle/K9/Eyelets Long.png" type="Texture" id=24]
+[ext_resource path="res://Textures/Muzzle/K9/Fur Short.png" type="Texture" id=25]
+[ext_resource path="res://Textures/Muzzle/Frisky/4 Holes.png" type="Texture" id=26]
+[ext_resource path="res://Textures/Muzzle/Puppy/Muzzle.png" type="Texture" id=27]
+[ext_resource path="res://Textures/Muzzle/K9/Muzzle Long.png" type="Texture" id=28]
+[ext_resource path="res://Textures/Muzzle/K9/7 Holes Short.png" type="Texture" id=29]
+[ext_resource path="res://Textures/Muzzle/Jowl.png" type="Texture" id=30]
+[ext_resource path="res://Materials/Decrypt Image Base.material" type="Material" id=31]
+[ext_resource path="res://Textures/Muzzle/LowRes/Fur Standard.png" type="Texture" id=32]
+[ext_resource path="res://Textures/Muzzle/LowRes/Fur Long.png" type="Texture" id=33]
+[ext_resource path="res://Textures/Muzzle/LowRes/Whiskers Standard.png" type="Texture" id=34]
+[ext_resource path="res://Textures/Muzzle/LowRes/Whiskers Short.png" type="Texture" id=35]
+[ext_resource path="res://Textures/Muzzle/LowRes/K9 Muzzle Short.png" type="Texture" id=36]
+[ext_resource path="res://Textures/Muzzle/LowRes/K9 Muzzle Long.png" type="Texture" id=37]
+[ext_resource path="res://Textures/Muzzle/LowRes/Preview_Base.png" type="Texture" id=38]
+[ext_resource path="res://Textures/Muzzle/LowRes/Frisky Muzzle.png" type="Texture" id=39]
+[ext_resource path="res://Textures/Muzzle/LowRes/Whiskers Long.png" type="Texture" id=40]
+[ext_resource path="res://Textures/Muzzle/LowRes/Jowl.png" type="Texture" id=41]
+[ext_resource path="res://Textures/Muzzle/LowRes/Puppy Muzzle.png" type="Texture" id=42]
+[ext_resource path="res://Textures/Muzzle/LowRes/K9 Muzzle Standard.png" type="Texture" id=43]
+[ext_resource path="res://Textures/Muzzle/LowRes/Fur Short.png" type="Texture" id=44]
+[ext_resource path="res://Textures/Drop Down.png" type="Texture" id=62]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[sub_resource type="Theme" id=9]
+default_font = SubResource( 8 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 8 )
+Button/styles/disabled = SubResource( 3 )
+Button/styles/focus = SubResource( 4 )
+Button/styles/hover = SubResource( 5 )
+Button/styles/normal = SubResource( 6 )
+Button/styles/pressed = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=57]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="DynamicFont" id=58]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=59]
+
+[sub_resource type="StyleBoxEmpty" id=60]
+
+[sub_resource type="StyleBoxFlat" id=61]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=62]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=63]
+
+[sub_resource type="Theme" id=120]
+default_font = SubResource( 58 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 58 )
+Button/styles/disabled = SubResource( 59 )
+Button/styles/focus = SubResource( 60 )
+Button/styles/hover = SubResource( 61 )
+Button/styles/normal = SubResource( 62 )
+Button/styles/pressed = SubResource( 63 )
+
+[sub_resource type="DynamicFont" id=121]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=122]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=123]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=124]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=125]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=126]
+
+[sub_resource type="StyleBoxEmpty" id=127]
+
+[sub_resource type="StyleBoxFlat" id=128]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=129]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=130]
+
+[sub_resource type="Theme" id=131]
+default_font = SubResource( 125 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 125 )
+Button/styles/disabled = SubResource( 126 )
+Button/styles/focus = SubResource( 127 )
+Button/styles/hover = SubResource( 128 )
+Button/styles/normal = SubResource( 129 )
+Button/styles/pressed = SubResource( 130 )
+
+[sub_resource type="DynamicFont" id=132]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=133]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=134]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=135]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=136]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=137]
+
+[sub_resource type="StyleBoxEmpty" id=138]
+
+[sub_resource type="StyleBoxFlat" id=139]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=140]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=141]
+
+[sub_resource type="Theme" id=142]
+default_font = SubResource( 136 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 136 )
+Button/styles/disabled = SubResource( 137 )
+Button/styles/focus = SubResource( 138 )
+Button/styles/hover = SubResource( 139 )
+Button/styles/normal = SubResource( 140 )
+Button/styles/pressed = SubResource( 141 )
+
+[sub_resource type="DynamicFont" id=143]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=144]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=145]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=146]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=147]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=148]
+
+[sub_resource type="StyleBoxEmpty" id=149]
+
+[sub_resource type="StyleBoxFlat" id=150]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=151]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=152]
+
+[sub_resource type="Theme" id=153]
+default_font = SubResource( 147 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 147 )
+Button/styles/disabled = SubResource( 148 )
+Button/styles/focus = SubResource( 149 )
+Button/styles/hover = SubResource( 150 )
+Button/styles/normal = SubResource( 151 )
+Button/styles/pressed = SubResource( 152 )
+
+[sub_resource type="DynamicFont" id=154]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=155]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=156]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=157]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=158]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=159]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=160]
+
+[sub_resource type="StyleBoxEmpty" id=161]
+
+[sub_resource type="StyleBoxFlat" id=162]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=163]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=164]
+
+[sub_resource type="Theme" id=165]
+default_font = SubResource( 159 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 159 )
+Button/styles/disabled = SubResource( 160 )
+Button/styles/focus = SubResource( 161 )
+Button/styles/hover = SubResource( 162 )
+Button/styles/normal = SubResource( 163 )
+Button/styles/pressed = SubResource( 164 )
+
+[sub_resource type="StyleBoxFlat" id=166]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=167]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=168]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=70]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=71]
+
+[sub_resource type="StyleBoxEmpty" id=72]
+
+[sub_resource type="StyleBoxFlat" id=73]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=74]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=75]
+
+[sub_resource type="Theme" id=76]
+default_font = SubResource( 70 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 70 )
+Button/styles/disabled = SubResource( 71 )
+Button/styles/focus = SubResource( 72 )
+Button/styles/hover = SubResource( 73 )
+Button/styles/normal = SubResource( 74 )
+Button/styles/pressed = SubResource( 75 )
+
+[sub_resource type="DynamicFont" id=77]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=78]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=79]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=80]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=81]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=82]
+
+[sub_resource type="StyleBoxEmpty" id=83]
+
+[sub_resource type="StyleBoxFlat" id=84]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=85]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=86]
+
+[sub_resource type="Theme" id=87]
+default_font = SubResource( 81 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 81 )
+Button/styles/disabled = SubResource( 82 )
+Button/styles/focus = SubResource( 83 )
+Button/styles/hover = SubResource( 84 )
+Button/styles/normal = SubResource( 85 )
+Button/styles/pressed = SubResource( 86 )
+
+[sub_resource type="DynamicFont" id=88]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=89]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=90]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=91]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=92]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=93]
+
+[sub_resource type="StyleBoxEmpty" id=94]
+
+[sub_resource type="StyleBoxFlat" id=95]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=96]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=97]
+
+[sub_resource type="Theme" id=98]
+default_font = SubResource( 92 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 92 )
+Button/styles/disabled = SubResource( 93 )
+Button/styles/focus = SubResource( 94 )
+Button/styles/hover = SubResource( 95 )
+Button/styles/normal = SubResource( 96 )
+Button/styles/pressed = SubResource( 97 )
+
+[sub_resource type="DynamicFont" id=99]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=100]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=101]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=102]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=103]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=104]
+
+[sub_resource type="StyleBoxEmpty" id=105]
+
+[sub_resource type="StyleBoxFlat" id=106]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=107]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=108]
+
+[sub_resource type="Theme" id=109]
+default_font = SubResource( 103 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 103 )
+Button/styles/disabled = SubResource( 104 )
+Button/styles/focus = SubResource( 105 )
+Button/styles/hover = SubResource( 106 )
+Button/styles/normal = SubResource( 107 )
+Button/styles/pressed = SubResource( 108 )
+
+[sub_resource type="DynamicFont" id=110]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=111]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=112]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=113]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=169]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=170]
+
+[sub_resource type="StyleBoxEmpty" id=171]
+
+[sub_resource type="StyleBoxFlat" id=172]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=173]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=174]
+
+[sub_resource type="Theme" id=64]
+default_font = SubResource( 169 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 169 )
+Button/styles/disabled = SubResource( 170 )
+Button/styles/focus = SubResource( 171 )
+Button/styles/hover = SubResource( 172 )
+Button/styles/normal = SubResource( 173 )
+Button/styles/pressed = SubResource( 174 )
+
+[sub_resource type="StyleBoxFlat" id=66]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=65]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=67]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=68]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=114]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=41]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[sub_resource type="StyleBoxEmpty" id=43]
+
+[sub_resource type="StyleBoxFlat" id=44]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=45]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=46]
+
+[sub_resource type="Theme" id=115]
+default_font = SubResource( 41 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 41 )
+Button/styles/disabled = SubResource( 42 )
+Button/styles/focus = SubResource( 43 )
+Button/styles/hover = SubResource( 44 )
+Button/styles/normal = SubResource( 45 )
+Button/styles/pressed = SubResource( 46 )
+
+[sub_resource type="DynamicFont" id=116]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=117]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=118]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=69]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=119]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=175]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=176]
+
+[sub_resource type="StyleBoxEmpty" id=177]
+
+[sub_resource type="StyleBoxFlat" id=178]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=179]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=180]
+
+[sub_resource type="Theme" id=181]
+default_font = SubResource( 175 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 175 )
+Button/styles/disabled = SubResource( 176 )
+Button/styles/focus = SubResource( 177 )
+Button/styles/hover = SubResource( 178 )
+Button/styles/normal = SubResource( 179 )
+Button/styles/pressed = SubResource( 180 )
+
+[sub_resource type="DynamicFont" id=182]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=183]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=184]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=185]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=186]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxFlat" id=189]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=190]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=191]
+
+[sub_resource type="Theme" id=192]
+default_font = SubResource( 186 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 186 )
+Button/styles/disabled = SubResource( 187 )
+Button/styles/focus = SubResource( 188 )
+Button/styles/hover = SubResource( 189 )
+Button/styles/normal = SubResource( 190 )
+Button/styles/pressed = SubResource( 191 )
+
+[sub_resource type="DynamicFont" id=193]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=194]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=195]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=196]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Neo Muzzle Designer" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Image Panel" type="Control" parent="."]
+margin_right = 2198.0
+margin_bottom = 3400.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Behind" type="TextureRect" parent="Image Panel"]
+material = ExtResource( 31 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Control" type="Control" parent="Image Panel/Behind"]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Frisky Muzzle" type="Control" parent="Image Panel/Behind/Control" groups=["Frisky Muzzle", "Muzzle Preview", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Standard" type="Control" parent="Image Panel/Behind/Control/Frisky Muzzle" groups=["Muzzle Base", "Muzzle Standard", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="Image Panel/Behind/Control/Frisky Muzzle/Standard" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Image Panel/Behind/Control/Frisky Muzzle/Standard"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Image Panel/Behind/Control/Frisky Muzzle/Standard/Muzzle Extra" groups=["Eyelets", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="4 Holes" type="TextureRect" parent="Image Panel/Behind/Control/Frisky Muzzle/Standard/Muzzle Extra" groups=["4 Holes", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl" type="TextureRect" parent="Image Panel/Behind/Control/Frisky Muzzle" groups=["Jowl", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 30 )
+expand = true
+stretch_mode = 6
+
+[node name="K9 Muzzle" type="Control" parent="Image Panel/Behind/Control" groups=["K9 Muzzle", "Muzzle Preview", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Short" type="Control" parent="Image Panel/Behind/Control/K9 Muzzle" groups=["Muzzle Base", "Muzzle Short", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Short" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Image Panel/Behind/Control/K9 Muzzle/Short"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Short/Muzzle Extra" groups=["Eyelets", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 6
+
+[node name="7 Holes" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Short/Muzzle Extra" groups=["7 Holes", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 29 )
+expand = true
+stretch_mode = 6
+
+[node name="Whiskers" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Short/Muzzle Extra" groups=["Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview", "Whiskers"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+
+[node name="Fur" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Short/Muzzle Extra" groups=["Fur", "Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 25 )
+expand = true
+stretch_mode = 6
+
+[node name="Standard" type="Control" parent="Image Panel/Behind/Control/K9 Muzzle" groups=["Muzzle Base", "Muzzle Standard", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Standard" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Image Panel/Behind/Control/K9 Muzzle/Standard"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Standard/Muzzle Extra" groups=["Eyelets", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="7 Holes" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Standard/Muzzle Extra" groups=["7 Holes", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 6
+
+[node name="Whiskers" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Standard/Muzzle Extra" groups=["Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview", "Whiskers"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="Fur" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Standard/Muzzle Extra" groups=["Fur", "Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 6
+
+[node name="Long" type="Control" parent="Image Panel/Behind/Control/K9 Muzzle" groups=["Muzzle Base", "Muzzle Long", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Long" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 28 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Image Panel/Behind/Control/K9 Muzzle/Long"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Long/Muzzle Extra" groups=["Eyelets", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 24 )
+expand = true
+stretch_mode = 6
+
+[node name="7 Holes" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Long/Muzzle Extra" groups=["7 Holes", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 19 )
+expand = true
+stretch_mode = 6
+
+[node name="Whiskers" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Long/Muzzle Extra" groups=["Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview", "Whiskers"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 6
+
+[node name="Fur" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle/Long/Muzzle Extra" groups=["Fur", "Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 21 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl" type="TextureRect" parent="Image Panel/Behind/Control/K9 Muzzle" groups=["Jowl", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 30 )
+expand = true
+stretch_mode = 6
+
+[node name="Puppy Muzzle" type="Control" parent="Image Panel/Behind/Control" groups=["Muzzle Preview", "Preview", "Puppy Muzzle"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Muzzle" type="TextureRect" parent="Image Panel/Behind/Control/Puppy Muzzle" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 27 )
+expand = true
+stretch_mode = 6
+
+[node name="Preview Colour Selector" parent="Image Panel/Behind" instance=ExtResource( 1 )]
+theme = ExtResource( 3 )
+texture = ExtResource( 38 )
+
+[node name="K9 Muzzle" type="Control" parent="Image Panel/Behind/Preview Colour Selector" groups=["K9 Muzzle", "Muzzle Preview", "Preview"]]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="K9 Muzzle Long" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle" groups=["Muzzle Base", "Muzzle Long", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../..")
+theme = ExtResource( 3 )
+texture = ExtResource( 37 )
+
+[node name="Fur" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle/K9 Muzzle Long" groups=["Fur", "Muzzle Detail B", "Muzzle Long", "Neo K9", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 3 )
+texture = ExtResource( 33 )
+
+[node name="Whiskers" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle/K9 Muzzle Long" groups=["Muzzle Detail B", "Muzzle Long", "Neo K9", "Preview", "Whiskers"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Fur")
+theme = ExtResource( 3 )
+texture = ExtResource( 40 )
+
+[node name="K9 Muzzle Short" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle" groups=["Muzzle Base", "Muzzle Short", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../K9 Muzzle Long/Whiskers")
+theme = ExtResource( 3 )
+texture = ExtResource( 36 )
+
+[node name="Fur" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle/K9 Muzzle Short" groups=["Fur", "Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 3 )
+texture = ExtResource( 44 )
+
+[node name="Whiskers" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle/K9 Muzzle Short" groups=["Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview", "Whiskers"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Fur")
+theme = ExtResource( 3 )
+texture = ExtResource( 35 )
+
+[node name="K9 Muzzle Standard" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle" groups=["Muzzle Base", "Muzzle Standard", "Preview"] instance=ExtResource( 1 )]
+focus_next = NodePath("../K9 Muzzle Short/Whiskers")
+theme = ExtResource( 3 )
+texture = ExtResource( 43 )
+
+[node name="Fur" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle/K9 Muzzle Standard" groups=["Fur", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 3 )
+texture = ExtResource( 32 )
+
+[node name="Whiskers" parent="Image Panel/Behind/Preview Colour Selector/K9 Muzzle/K9 Muzzle Standard" groups=["Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview", "Whiskers"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Fur")
+theme = ExtResource( 3 )
+texture = ExtResource( 34 )
+
+[node name="Frisky Muzzle" parent="Image Panel/Behind/Preview Colour Selector" groups=["Frisky Muzzle", "Muzzle Preview", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../K9 Muzzle/K9 Muzzle Standard/Whiskers")
+theme = ExtResource( 3 )
+texture = ExtResource( 39 )
+
+[node name="Jowl" parent="Image Panel/Behind/Preview Colour Selector" groups=["Jowl", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Frisky Muzzle")
+theme = ExtResource( 3 )
+texture = ExtResource( 41 )
+
+[node name="Puppy Muzzle" parent="Image Panel/Behind/Preview Colour Selector" groups=["Muzzle Preview", "Preview", "Puppy Muzzle"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Jowl")
+theme = ExtResource( 3 )
+texture = ExtResource( 42 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 2202.0
+margin_right = 4400.0
+margin_bottom = 3400.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 2198.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Neoprene Frisky Hood"
+valign = 1
+clip_text = true
+
+[node name="Control" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 52.0
+margin_right = 2198.0
+margin_bottom = 3400.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control"]
+margin_right = 2198.0
+margin_bottom = 980.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_right = 2198.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Style" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 10.0
+margin_right = 2198.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 2 )
+text = "1. Muzzle Style"
+
+[node name="Button" type="Button" parent="VBoxContainer/Control/VBoxContainer" groups=["Hood Option Button", "Muzzle Type Button", "Preview"]]
+margin_top = 32.0
+margin_right = 2198.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 100, 30 )
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "K9"
+script = ExtResource( 12 )
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Muzzle Type"
+
+[node name="Popup" type="Popup" parent="VBoxContainer/Control/VBoxContainer/Button"]
+visible = true
+margin_right = 249.0
+margin_bottom = 624.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Control/VBoxContainer/Button/Popup"]
+margin_right = 161.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 0 )
+custom_styles/panel = SubResource( 57 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 10.0
+margin_top = 46.0
+margin_right = 151.0
+margin_bottom = 66.0
+text = "Turquoise---------[ ]"
+
+[node name="Styles" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 151.0
+margin_bottom = 102.0
+
+[node name="Frisky" type="Button" parent="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer/Styles"]
+margin_right = 141.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Frisky"
+expand_icon = true
+
+[node name="K9" type="Button" parent="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer/Styles"]
+margin_top = 32.0
+margin_right = 141.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "K9"
+expand_icon = true
+
+[node name="Puppy" type="Button" parent="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer/Styles"]
+margin_top = 64.0
+margin_right = 141.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Puppy"
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Spacer" type="HSeparator" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 62.0
+margin_right = 2198.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Frisky Options" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer" groups=["Frisky Options", "Muzzle Options", "Preview"]]
+visible = false
+margin_top = 82.0
+margin_right = 2198.0
+margin_bottom = 520.0
+
+[node name="Nose2" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_right = 2198.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "2. Nose"
+
+[node name="Button15" parent="VBoxContainer/Control/VBoxContainer/Frisky Options" groups=["Colour Selection Button", "Nose"] instance=ExtResource( 8 )]
+margin_top = 26.0
+margin_right = 2198.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 120 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 121 )
+custom_styles/hover = SubResource( 122 )
+custom_styles/pressed = SubResource( 122 )
+custom_styles/focus = SubResource( 123 )
+custom_styles/disabled = SubResource( 124 )
+custom_styles/normal = SubResource( 122 )
+text = "Shiny"
+node_group = "Nose"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/Button15"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control5" type="Control" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 60.0
+margin_right = 2198.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Back" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 74.0
+margin_right = 2198.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 2 )
+text = "3. Muzzle Back"
+
+[node name="Muzzle Back Button" parent="VBoxContainer/Control/VBoxContainer/Frisky Options" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 8 )]
+margin_top = 100.0
+margin_right = 2198.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 131 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 132 )
+custom_styles/hover = SubResource( 133 )
+custom_styles/pressed = SubResource( 133 )
+custom_styles/focus = SubResource( 134 )
+custom_styles/disabled = SubResource( 135 )
+custom_styles/normal = SubResource( 133 )
+node_group = "Muzzle"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/Muzzle Back Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control6" type="Control" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 134.0
+margin_right = 2198.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Middle" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 148.0
+margin_right = 2198.0
+margin_bottom = 170.0
+custom_fonts/font = SubResource( 2 )
+text = "4. Muzzle Middle"
+
+[node name="Muzzle Middle Button" parent="VBoxContainer/Control/VBoxContainer/Frisky Options" groups=["Bridge", "Colour Selection Button"] instance=ExtResource( 8 )]
+margin_top = 174.0
+margin_right = 2198.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 142 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 143 )
+custom_styles/hover = SubResource( 144 )
+custom_styles/pressed = SubResource( 144 )
+custom_styles/focus = SubResource( 145 )
+custom_styles/disabled = SubResource( 146 )
+custom_styles/normal = SubResource( 144 )
+node_group = "Bridge"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/Muzzle Middle Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control7" type="Control" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 208.0
+margin_right = 2198.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Front" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 222.0
+margin_right = 2198.0
+margin_bottom = 244.0
+custom_fonts/font = SubResource( 2 )
+text = "5. Muzzle Front"
+
+[node name="Muzzle Front Button" parent="VBoxContainer/Control/VBoxContainer/Frisky Options" groups=["Colour Selection Button", "Lip"] instance=ExtResource( 8 )]
+margin_top = 248.0
+margin_right = 2198.0
+margin_bottom = 278.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 153 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 154 )
+custom_styles/hover = SubResource( 155 )
+custom_styles/pressed = SubResource( 155 )
+custom_styles/focus = SubResource( 156 )
+custom_styles/disabled = SubResource( 157 )
+custom_styles/normal = SubResource( 155 )
+node_group = "Lip"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/Muzzle Front Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control10" type="Control" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 282.0
+margin_right = 2198.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Details" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 296.0
+margin_right = 2198.0
+margin_bottom = 318.0
+custom_fonts/font = SubResource( 2 )
+text = "6. Muzzle Details"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/Frisky Options"]
+margin_top = 322.0
+margin_right = 2198.0
+margin_bottom = 438.0
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4"]
+margin_right = 20.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4"]
+margin_left = 20.0
+margin_right = 2198.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+
+[node name="Jowl" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer"]
+margin_right = 2178.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 158 )
+text = "Jowl"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer"]
+margin_top = 26.0
+margin_right = 2178.0
+margin_bottom = 56.0
+custom_constants/separation = 20
+
+[node name="Jowl Button" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_right = 1079.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+theme = SubResource( 165 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 166 )
+custom_styles/pressed = SubResource( 166 )
+custom_styles/focus = SubResource( 166 )
+custom_styles/normal = SubResource( 166 )
+text = "No"
+node_group = "Jowl"
+
+[node name="Y-N" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer/Jowl Button/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer/Jowl Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Button22" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer" groups=["Colour Selection Button", "Jowl Colour", "Sub Selection"] instance=ExtResource( 8 )]
+margin_left = 1099.0
+margin_right = 2178.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 165 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 158 )
+custom_styles/hover = SubResource( 166 )
+custom_styles/pressed = SubResource( 166 )
+custom_styles/focus = SubResource( 167 )
+custom_styles/disabled = SubResource( 168 )
+custom_styles/normal = SubResource( 166 )
+disabled = true
+node_group = "Jowl Colour"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer/Button22"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Details3" type="Label" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer"]
+margin_top = 60.0
+margin_right = 2178.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 158 )
+text = "Secondary Detail"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer"]
+margin_top = 86.0
+margin_right = 2178.0
+margin_bottom = 116.0
+custom_constants/separation = 20
+
+[node name="Button" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2" groups=["Frisky", "Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_right = 2178.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 165 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 166 )
+custom_styles/pressed = SubResource( 166 )
+custom_styles/focus = SubResource( 166 )
+custom_styles/normal = SubResource( 166 )
+text = "4 Holes"
+node_group = "Muzzle Detail B"
+
+[node name="Muzzle Detail" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer" index="5"]
+visible = true
+
+[node name="7 Holes" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="0"]
+visible = false
+
+[node name="Whiskers" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="2"]
+visible = false
+
+[node name="Fur" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="3"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="K9 Options" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer" groups=["K9 Options", "Muzzle Options", "Preview"]]
+margin_top = 82.0
+margin_right = 2198.0
+margin_bottom = 580.0
+
+[node name="Nose2" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_right = 2198.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "2. Nose"
+
+[node name="Nose Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options" groups=["Colour Selection Button", "Nose"] instance=ExtResource( 8 )]
+margin_top = 26.0
+margin_right = 2198.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 76 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 77 )
+custom_styles/hover = SubResource( 78 )
+custom_styles/pressed = SubResource( 78 )
+custom_styles/focus = SubResource( 79 )
+custom_styles/disabled = SubResource( 80 )
+custom_styles/normal = SubResource( 78 )
+text = "Shiny"
+node_group = "Nose"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/Nose Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control5" type="Control" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 60.0
+margin_right = 2198.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 74.0
+margin_right = 2198.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 2 )
+text = "3. Muzzle"
+
+[node name="Muzzle Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 8 )]
+margin_top = 100.0
+margin_right = 2198.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 87 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 88 )
+custom_styles/hover = SubResource( 89 )
+custom_styles/pressed = SubResource( 89 )
+custom_styles/focus = SubResource( 90 )
+custom_styles/disabled = SubResource( 91 )
+custom_styles/normal = SubResource( 89 )
+node_group = "Muzzle"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/Muzzle Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control6" type="Control" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 134.0
+margin_right = 2198.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Bridge" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 148.0
+margin_right = 2198.0
+margin_bottom = 170.0
+custom_fonts/font = SubResource( 2 )
+text = "4. Muzzle Bridge"
+
+[node name="Bridge Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options" groups=["Bridge", "Colour Selection Button"] instance=ExtResource( 8 )]
+margin_top = 174.0
+margin_right = 2198.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 98 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 99 )
+custom_styles/hover = SubResource( 100 )
+custom_styles/pressed = SubResource( 100 )
+custom_styles/focus = SubResource( 101 )
+custom_styles/disabled = SubResource( 102 )
+custom_styles/normal = SubResource( 100 )
+node_group = "Bridge"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/Bridge Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control7" type="Control" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 208.0
+margin_right = 2198.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Lip" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 222.0
+margin_right = 2198.0
+margin_bottom = 244.0
+custom_fonts/font = SubResource( 2 )
+text = "5. Muzzle Lip"
+
+[node name="Muzzle Lip Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options" groups=["Colour Selection Button", "Lip"] instance=ExtResource( 8 )]
+margin_top = 248.0
+margin_right = 2198.0
+margin_bottom = 278.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 109 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 110 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 112 )
+custom_styles/disabled = SubResource( 113 )
+custom_styles/normal = SubResource( 111 )
+node_group = "Lip"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/Muzzle Lip Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control10" type="Control" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 282.0
+margin_right = 2198.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Details" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 296.0
+margin_right = 2198.0
+margin_bottom = 318.0
+custom_fonts/font = SubResource( 2 )
+text = "6. Muzzle Details"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 322.0
+margin_right = 2198.0
+margin_bottom = 438.0
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3"]
+margin_right = 20.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3"]
+margin_left = 20.0
+margin_right = 2198.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+
+[node name="Jowl" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer"]
+margin_right = 2178.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "Jowl"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer"]
+margin_top = 26.0
+margin_right = 2178.0
+margin_bottom = 56.0
+custom_constants/separation = 20
+
+[node name="Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_right = 1079.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+theme = SubResource( 64 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "No"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Jowl"
+
+[node name="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer/Button/Popup/PanelContainer" index="0"]
+margin_top = 30.0
+margin_bottom = 50.0
+
+[node name="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer/Button/Popup/PanelContainer" index="1"]
+margin_bottom = 70.0
+
+[node name="Y-N" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer/Button/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Button2" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer" groups=["Colour Selection Button", "Jowl Colour", "Sub Selection"] instance=ExtResource( 8 )]
+margin_left = 1099.0
+margin_right = 2178.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 64 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+disabled = true
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Jowl Colour"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer/Button2"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="Muzzle Details3" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer"]
+margin_top = 60.0
+margin_right = 2178.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 2 )
+text = "Secondary Detail"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer"]
+margin_top = 86.0
+margin_right = 2178.0
+margin_bottom = 116.0
+custom_constants/separation = 20
+
+[node name="Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3" groups=["Hood Option Button", "K9", "Muzzle Detail B", "Preview"] instance=ExtResource( 11 )]
+margin_right = 1079.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 114 )
+custom_styles/pressed = SubResource( 114 )
+custom_styles/focus = SubResource( 114 )
+custom_styles/normal = SubResource( 114 )
+text = "7 Holes"
+node_group = "Muzzle Detail B"
+
+[node name="Muzzle Detail" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3/Button/Popup/PanelContainer/VBoxContainer" index="5"]
+visible = true
+
+[node name="4 Holes" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="4"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Detail B Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3" groups=["Colour Selection Button", "Muzzle Detail B Colour", "Sub Selection"] instance=ExtResource( 8 )]
+margin_left = 1099.0
+margin_right = 2178.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 115 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 116 )
+custom_styles/hover = SubResource( 114 )
+custom_styles/pressed = SubResource( 114 )
+custom_styles/focus = SubResource( 117 )
+custom_styles/disabled = SubResource( 118 )
+custom_styles/normal = SubResource( 114 )
+disabled = true
+text = "Shiny"
+node_group = "Muzzle Detail B Colour"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3/Muzzle Detail B Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Length" type="Label" parent="VBoxContainer/Control/VBoxContainer/K9 Options"]
+margin_top = 442.0
+margin_right = 2198.0
+margin_bottom = 464.0
+custom_fonts/font = SubResource( 69 )
+text = "7. Muzzle Length"
+
+[node name="Muzzle Length Button" parent="VBoxContainer/Control/VBoxContainer/K9 Options" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_top = 468.0
+margin_right = 2198.0
+margin_bottom = 498.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 119 )
+custom_styles/pressed = SubResource( 119 )
+custom_styles/focus = SubResource( 119 )
+custom_styles/normal = SubResource( 119 )
+text = "Standard"
+node_group = "Muzzle Length"
+
+[node name="Muzzle Length" parent="VBoxContainer/Control/VBoxContainer/K9 Options/Muzzle Length Button/Popup/PanelContainer/VBoxContainer" index="3"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/K9 Options/Muzzle Length Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Puppy Options" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer" groups=["Muzzle Options", "Preview", "Puppy Options"]]
+visible = false
+margin_top = 82.0
+margin_right = 2198.0
+margin_bottom = 212.0
+
+[node name="Muzzle" type="Label" parent="VBoxContainer/Control/VBoxContainer/Puppy Options"]
+margin_right = 2198.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "2. Muzzle"
+
+[node name="Muzzle Button" parent="VBoxContainer/Control/VBoxContainer/Puppy Options" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 8 )]
+margin_top = 26.0
+margin_right = 2198.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 100, 30 )
+theme = SubResource( 181 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 182 )
+custom_styles/hover = SubResource( 183 )
+custom_styles/pressed = SubResource( 183 )
+custom_styles/focus = SubResource( 184 )
+custom_styles/disabled = SubResource( 185 )
+custom_styles/normal = SubResource( 183 )
+node_group = "Muzzle"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Puppy Options/Muzzle Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control6" type="Control" parent="VBoxContainer/Control/VBoxContainer/Puppy Options"]
+margin_top = 60.0
+margin_right = 2198.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Bridge" type="Label" parent="VBoxContainer/Control/VBoxContainer/Puppy Options"]
+margin_top = 74.0
+margin_right = 2198.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 2 )
+text = "3. Muzzle Bridge"
+
+[node name="Bridge Button" parent="VBoxContainer/Control/VBoxContainer/Puppy Options" groups=["Bridge", "Colour Selection Button"] instance=ExtResource( 8 )]
+margin_top = 100.0
+margin_right = 2198.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 100, 30 )
+theme = SubResource( 192 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 193 )
+custom_styles/hover = SubResource( 194 )
+custom_styles/pressed = SubResource( 194 )
+custom_styles/focus = SubResource( 195 )
+custom_styles/disabled = SubResource( 196 )
+custom_styles/normal = SubResource( 194 )
+node_group = "Bridge"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Puppy Options/Bridge Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control14" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 580.0
+margin_right = 2198.0
+margin_bottom = 980.0
+rect_min_size = Vector2( 0, 400 )
+
+[connection signal="pressed" from="VBoxContainer/Control/VBoxContainer/Button" to="VBoxContainer/Control/VBoxContainer/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer/Styles/Frisky" to="VBoxContainer/Control/VBoxContainer/Button" method="_option_selected" binds= [ 0 ]]
+[connection signal="pressed" from="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer/Styles/K9" to="VBoxContainer/Control/VBoxContainer/Button" method="_option_selected" binds= [ 1 ]]
+[connection signal="pressed" from="VBoxContainer/Control/VBoxContainer/Button/Popup/PanelContainer/Styles/Puppy" to="VBoxContainer/Control/VBoxContainer/Button" method="_option_selected" binds= [ 2 ]]
+
+[editable path="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer/Jowl Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/Frisky Options/HBoxContainer4/VBoxContainer/HBoxContainer2/Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer/Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/K9 Options/HBoxContainer3/VBoxContainer/HBoxContainer3/Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/K9 Options/Muzzle Length Button"]

@@ -1,0 +1,1186 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://Textures/Frisky/Preview/Double Brows.png" type="Texture" id=1]
+[ext_resource path="res://Materials/Designer Colour Picker.theme" type="Theme" id=2]
+[ext_resource path="res://Textures/Frisky/Preview/Single Brows.png" type="Texture" id=3]
+[ext_resource path="res://Materials/Decrypt Image Neoprene.material" type="Material" id=4]
+[ext_resource path="res://Textures/Frisky/Preview/Base.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Frisky/Preview/Standard Ear.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Frisky/Preview/Pointed Ear.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Neo Colour Selector.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Textures/Frisky/Preview/Floppy Ear.png" type="Texture" id=9]
+[ext_resource path="res://Materials/Decrypt Image Base.material" type="Material" id=10]
+[ext_resource path="res://Assets/Option Selector.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Textures/Frisky/Preview/Body.png" type="Texture" id=12]
+[ext_resource path="res://Fonts/Barlow/Barlow-SemiBold.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Standard Ear.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Floppy Ear.png" type="Texture" id=16]
+[ext_resource path="res://Fonts/Barlow/Barlow-ExtraBold.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Base.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Pointed Ear.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Single Brows.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Jowl.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Frisky/Preview/Eyeglass Slots.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Frisky/Preview/Ear Holes.png" type="Texture" id=23]
+[ext_resource path="res://Textures/Frisky/Preview/Muzzle 4 Holes.png" type="Texture" id=25]
+[ext_resource path="res://Textures/Frisky/Preview/Jowl.png" type="Texture" id=26]
+[ext_resource path="res://Textures/Frisky/Preview/Muzzle Eyelets.png" type="Texture" id=27]
+[ext_resource path="res://Textures/Drop Down.png" type="Texture" id=62]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 17 )
+
+[sub_resource type="ImageTexture" id=47]
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0.37, 0.37, 0.37, 1 )
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=49]
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.301961, 0.301961, 0.301961, 1 )
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=51]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=52]
+
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0.37, 0.37, 0.37, 1 )
+border_width_left = 1
+border_width_right = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=54]
+border_width_left = 1
+border_width_right = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=55]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="Theme" id=56]
+HScrollBar/icons/decrement = SubResource( 47 )
+HScrollBar/icons/decrement_highlight = SubResource( 47 )
+HScrollBar/icons/decrement_pressed = SubResource( 47 )
+HScrollBar/icons/increment = SubResource( 47 )
+HScrollBar/icons/increment_highlight = SubResource( 47 )
+HScrollBar/icons/increment_pressed = SubResource( 47 )
+HScrollBar/styles/grabber = SubResource( 48 )
+HScrollBar/styles/grabber_highlight = SubResource( 49 )
+HScrollBar/styles/grabber_pressed = SubResource( 50 )
+HScrollBar/styles/scroll = SubResource( 51 )
+HScrollBar/styles/scroll_focus = SubResource( 52 )
+VScrollBar/icons/decrement = SubResource( 47 )
+VScrollBar/icons/decrement_highlight = SubResource( 47 )
+VScrollBar/icons/decrement_pressed = SubResource( 47 )
+VScrollBar/icons/increment = SubResource( 47 )
+VScrollBar/icons/increment_highlight = SubResource( 47 )
+VScrollBar/icons/increment_pressed = SubResource( 47 )
+VScrollBar/styles/grabber = SubResource( 53 )
+VScrollBar/styles/grabber_highlight = SubResource( 54 )
+VScrollBar/styles/grabber_pressed = SubResource( 50 )
+VScrollBar/styles/scroll = SubResource( 55 )
+VScrollBar/styles/scroll_focus = SubResource( 52 )
+
+[sub_resource type="DynamicFont" id=65]
+size = 18
+font_data = ExtResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=66]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=67]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=68]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Neo K9 Hood Designer" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Image Panel" type="TextureRect" parent="."]
+material = ExtResource( 10 )
+margin_right = 2198.0
+margin_bottom = 3400.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="Base" type="TextureRect" parent="Image Panel"]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="Ear Holes" type="TextureRect" parent="Image Panel/Base" groups=["Ear Holes", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 6
+
+[node name="Eyeglass Slots" type="TextureRect" parent="Image Panel/Base" groups=["Eyeglass Slots", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 6
+
+[node name="Brow" type="Control" parent="Image Panel/Base"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Double" type="TextureRect" parent="Image Panel/Base/Brow" groups=["Brow", "Brow Double", "Brow Style", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Single" type="TextureRect" parent="Image Panel/Base/Brow" groups=["Brow", "Brow Single", "Brow Style", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="Ears" type="Control" parent="Image Panel/Base"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Standard" type="TextureRect" parent="Image Panel/Base/Ears" groups=["Ear", "Preview", "Standard Ear"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Pointed" type="TextureRect" parent="Image Panel/Base/Ears" groups=["Ear", "Pointed Ear", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="Floppy" type="TextureRect" parent="Image Panel/Base/Ears" groups=["Ear", "Floppy Ear", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Image Panel/Base"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Image Panel/Base/Muzzle Extra" groups=["Eyelets", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 27 )
+expand = true
+stretch_mode = 6
+
+[node name="4 Holes" type="TextureRect" parent="Image Panel/Base/Muzzle Extra" groups=["4 Holes", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 25 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl" type="TextureRect" parent="Image Panel/Base/Muzzle Extra" groups=["Jowl", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 26 )
+expand = true
+stretch_mode = 6
+
+[node name="Preview Colour Selector" parent="Image Panel" instance=ExtResource( 14 )]
+theme = ExtResource( 2 )
+texture = ExtResource( 18 )
+
+[node name="Single Brow" parent="Image Panel/Preview Colour Selector" groups=["Brow", "Brow Single", "Brow Style", "Preview"] instance=ExtResource( 14 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 2 )
+texture = ExtResource( 20 )
+
+[node name="Floppy Ear" parent="Image Panel/Preview Colour Selector" groups=["Ear", "Floppy Ear", "Preview"] instance=ExtResource( 14 )]
+visible = false
+focus_next = NodePath("../Single Brow")
+theme = ExtResource( 2 )
+texture = ExtResource( 16 )
+
+[node name="Pointed Ear" parent="Image Panel/Preview Colour Selector" groups=["Ear", "Pointed Ear", "Preview"] instance=ExtResource( 14 )]
+visible = false
+focus_next = NodePath("../Floppy Ear")
+theme = ExtResource( 2 )
+texture = ExtResource( 19 )
+
+[node name="Standard Ear" parent="Image Panel/Preview Colour Selector" groups=["Ear", "Preview", "Standard Ear"] instance=ExtResource( 14 )]
+focus_next = NodePath("../Pointed Ear")
+theme = ExtResource( 2 )
+texture = ExtResource( 15 )
+
+[node name="Jowl" parent="Image Panel/Preview Colour Selector" groups=["Jowl", "Preview"] instance=ExtResource( 14 )]
+visible = false
+focus_next = NodePath("../Standard Ear")
+theme = ExtResource( 2 )
+texture = ExtResource( 21 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 2202.0
+margin_right = 4400.0
+margin_bottom = 3400.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 2198.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Neoprene Frisky Hood"
+valign = 1
+clip_text = true
+
+[node name="Control" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 52.0
+margin_right = 2198.0
+margin_bottom = 3400.0
+size_flags_vertical = 3
+theme = SubResource( 56 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control"]
+margin_right = 2198.0
+margin_bottom = 1376.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_right = 2198.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Hood Base" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 10.0
+margin_right = 2198.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 65 )
+text = "1. Hood Base"
+
+[node name="Button12" parent="VBoxContainer/Control/VBoxContainer" groups=["Base", "Colour Selection Button"] instance=ExtResource( 8 )]
+margin_top = 32.0
+margin_right = 2198.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+text = "Shiny"
+node_group = "Base"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Button12"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control2" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 62.0
+margin_right = 2198.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Crown" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 72.0
+margin_right = 2198.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 65 )
+text = "2. Crown/Neck"
+
+[node name="Button13" parent="VBoxContainer/Control/VBoxContainer" groups=["Colour Selection Button", "CrownNeck"] instance=ExtResource( 8 )]
+margin_top = 94.0
+margin_right = 2198.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 100, 30 )
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+text = "Shiny"
+node_group = "CrownNeck"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Button13"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control3" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 124.0
+margin_right = 2198.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Brows" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 134.0
+margin_right = 2198.0
+margin_bottom = 156.0
+custom_fonts/font = SubResource( 65 )
+text = "3. Brows"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 156.0
+margin_right = 2198.0
+margin_bottom = 186.0
+custom_constants/separation = 20
+
+[node name="Button" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer2" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_right = 1089.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "Double"
+node_group = "Brow Style"
+
+[node name="Brows" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer" index="1"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer2/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Button14" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer2" groups=["Brow", "Colour Selection Button"] instance=ExtResource( 8 )]
+margin_left = 1109.0
+margin_right = 2198.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+node_group = "Brow"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer2/Button14"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control4" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 186.0
+margin_right = 2198.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Nose2" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 196.0
+margin_right = 2198.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 65 )
+text = "4. Nose"
+
+[node name="Nose Button" parent="VBoxContainer/Control/VBoxContainer" groups=["Colour Selection Button", "Nose"] instance=ExtResource( 8 )]
+margin_top = 218.0
+margin_right = 2198.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+text = "Shiny"
+node_group = "Nose"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Nose Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control5" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 248.0
+margin_right = 2198.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Back" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 258.0
+margin_right = 2198.0
+margin_bottom = 280.0
+custom_fonts/font = SubResource( 65 )
+text = "5. Muzzle Back"
+
+[node name="Muzzle Back Button" parent="VBoxContainer/Control/VBoxContainer" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 8 )]
+margin_top = 280.0
+margin_right = 2198.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+node_group = "Muzzle"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Muzzle Back Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control6" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 310.0
+margin_right = 2198.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Middle" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 320.0
+margin_right = 2198.0
+margin_bottom = 342.0
+custom_fonts/font = SubResource( 65 )
+text = "6. Muzzle Middle"
+
+[node name="Muzzle Middle Button" parent="VBoxContainer/Control/VBoxContainer" groups=["Bridge", "Colour Selection Button"] instance=ExtResource( 8 )]
+margin_top = 342.0
+margin_right = 2198.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+node_group = "Bridge"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Muzzle Middle Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control7" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 372.0
+margin_right = 2198.0
+margin_bottom = 382.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Front" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 382.0
+margin_right = 2198.0
+margin_bottom = 404.0
+custom_fonts/font = SubResource( 65 )
+text = "7. Muzzle Front"
+
+[node name="Muzzle Front Button" parent="VBoxContainer/Control/VBoxContainer" groups=["Colour Selection Button", "Lip"] instance=ExtResource( 8 )]
+margin_top = 404.0
+margin_right = 2198.0
+margin_bottom = 434.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+node_group = "Lip"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Muzzle Front Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control10" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 434.0
+margin_right = 2198.0
+margin_bottom = 444.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Ear Details" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 444.0
+margin_right = 2198.0
+margin_bottom = 466.0
+custom_fonts/font = SubResource( 65 )
+text = "8. Ear Details"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 466.0
+margin_right = 2198.0
+margin_bottom = 704.0
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer"]
+margin_right = 20.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer"]
+margin_left = 20.0
+margin_right = 2198.0
+margin_bottom = 238.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Style" type="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 2178.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 65 )
+text = "Style"
+
+[node name="Button11" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Ear Style", "Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_top = 22.0
+margin_right = 2178.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "Standard"
+node_group = "Ear Style"
+
+[node name="Ears" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Button11/Popup/PanelContainer/VBoxContainer" index="2"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Button11"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control11" type="Control" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 2178.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Inside3" type="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 2178.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 65 )
+text = "Inside"
+
+[node name="Button19" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Colour Selection Button", "Ear A"] instance=ExtResource( 8 )]
+margin_top = 84.0
+margin_right = 2178.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+node_group = "Ear A"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Button19"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control13" type="Control" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 114.0
+margin_right = 2178.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Inner Ear" type="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 124.0
+margin_right = 2178.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 65 )
+text = "Inner Ear"
+
+[node name="Button20" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Colour Selection Button", "Ear B"] instance=ExtResource( 8 )]
+margin_top = 146.0
+margin_right = 2178.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+text = "Shiny"
+node_group = "Ear B"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Button20"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control12" type="Control" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 176.0
+margin_right = 2178.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Outside" type="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 186.0
+margin_right = 2178.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 65 )
+text = "Outside"
+
+[node name="Button21" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Colour Selection Button", "Ear C"] instance=ExtResource( 8 )]
+margin_top = 208.0
+margin_right = 2178.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+text = "Shiny"
+node_group = "Ear C"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Button21"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control13" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 704.0
+margin_right = 2198.0
+margin_bottom = 714.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Details" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 714.0
+margin_right = 2198.0
+margin_bottom = 736.0
+custom_fonts/font = SubResource( 65 )
+text = "9. Muzzle Details"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 736.0
+margin_right = 2198.0
+margin_bottom = 852.0
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3"]
+margin_right = 20.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3"]
+margin_left = 20.0
+margin_right = 2198.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+
+[node name="Jowl" type="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_right = 2178.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 65 )
+text = "Jowl"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_top = 26.0
+margin_right = 2178.0
+margin_bottom = 56.0
+custom_constants/separation = 20
+
+[node name="Jowl Button" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_right = 1079.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "No"
+node_group = "Jowl"
+
+[node name="Y-N" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Jowl Button/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Jowl Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Button22" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer" groups=["Colour Selection Button", "Jowl Colour", "Sub Selection"] instance=ExtResource( 8 )]
+margin_left = 1099.0
+margin_right = 2178.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 65 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 67 )
+custom_styles/disabled = SubResource( 68 )
+custom_styles/normal = SubResource( 66 )
+disabled = true
+node_group = "Jowl Colour"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Button22"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Details3" type="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_top = 60.0
+margin_right = 2178.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 65 )
+text = "Secondary Detail"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_top = 86.0
+margin_right = 2178.0
+margin_bottom = 116.0
+custom_constants/separation = 20
+
+[node name="Button" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2" groups=["Frisky", "Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_right = 2178.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "4 Holes"
+node_group = "Muzzle Detail B"
+
+[node name="Label" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer" index="0"]
+margin_top = 30.0
+margin_bottom = 50.0
+
+[node name="VBoxContainer" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer" index="1"]
+margin_bottom = 70.0
+
+[node name="Muzzle Detail" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer" index="5"]
+visible = true
+margin_bottom = 60.0
+
+[node name="7 Holes" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="0"]
+visible = false
+
+[node name="Whiskers" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="2"]
+visible = false
+
+[node name="Fur" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="3"]
+visible = false
+
+[node name="4 Holes" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="4"]
+margin_top = 32.0
+margin_bottom = 60.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control12" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 852.0
+margin_right = 2198.0
+margin_bottom = 862.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Eyeglass Slots" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 862.0
+margin_right = 2198.0
+margin_bottom = 884.0
+custom_fonts/font = SubResource( 65 )
+text = "Eyeglass Slots"
+
+[node name="Button10" parent="VBoxContainer/Control/VBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_top = 884.0
+margin_right = 2198.0
+margin_bottom = 914.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "No"
+node_group = "Eyeglass Slots"
+
+[node name="Y-N" parent="VBoxContainer/Control/VBoxContainer/Button10/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Button10"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control15" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 914.0
+margin_right = 2198.0
+margin_bottom = 924.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Ear Holes2" type="Label" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 924.0
+margin_right = 2198.0
+margin_bottom = 946.0
+custom_fonts/font = SubResource( 65 )
+text = "Ear Holes"
+
+[node name="Button11" parent="VBoxContainer/Control/VBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 11 )]
+margin_top = 946.0
+margin_right = 2198.0
+margin_bottom = 976.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 66 )
+custom_styles/focus = SubResource( 66 )
+custom_styles/normal = SubResource( 66 )
+text = "Yes"
+node_group = "Ear Holes"
+
+[node name="Y-N" parent="VBoxContainer/Control/VBoxContainer/Button11/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/Button11"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 62 )
+expand = true
+stretch_mode = 6
+
+[node name="Control14" type="Control" parent="VBoxContainer/Control/VBoxContainer"]
+margin_top = 976.0
+margin_right = 2198.0
+margin_bottom = 1376.0
+rect_min_size = Vector2( 0, 400 )
+
+[editable path="VBoxContainer/Control/VBoxContainer/HBoxContainer2/Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/HBoxContainer/VBoxContainer/Button11"]
+[editable path="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Jowl Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button"]
+[editable path="VBoxContainer/Control/VBoxContainer/Button10"]
+[editable path="VBoxContainer/Control/VBoxContainer/Button11"]
