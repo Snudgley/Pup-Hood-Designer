@@ -147,8 +147,6 @@ func _settings_to_code():
 	number = BigMaths.big_add(number, String(settings[settings.size() - 1]))
 	
 	var output = _B10_to_B64(number)
-	print(number, " to code")
-	print(settings, " to code")
 	emit_signal('generated_code', output)
 	return output
 
@@ -163,7 +161,6 @@ func _code_to_settings(code : String):
 	if number == "Invalid":
 		_input_invalid()
 		return
-	print(number, " to settings")
 	
 	for i in options_in_setting.size():
 		var partial = BigMaths.big_divide(number, code_multiples[i], 40)
@@ -172,7 +169,6 @@ func _code_to_settings(code : String):
 		number = BigMaths.big_multiply(BigMaths.big_subtract(partial, partial_stripped), code_multiples[i])
 		number = BigMaths.big_round(number)
 	var settings_new = settings
-	print(settings, " to settings")
 	
 	for i in options_in_setting.size():
 		if colour_groups.has(node_groups[i]):

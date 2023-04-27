@@ -1332,6 +1332,7 @@ custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 5 )
 custom_styles/normal = SubResource( 3 )
 disabled = true
+text = "Black"
 node_group = "Muzzle Detail B Colour"
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button12"]

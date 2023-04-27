@@ -439,7 +439,6 @@ func change_buttons(catagory : String, index : int, pressed : bool):
 		for i in get_tree().get_nodes_in_group("Jowl Colour"):
 			i.disabled = !pressed
 	elif catagory == "Muzzle Detail B":
-		print(catagory, index, pressed)
 		for i in get_tree().get_nodes_in_group("Muzzle Detail B Colour"):
 			i.disabled = index < 2
 	for i in get_tree().get_nodes_in_group("Hood Option Button"):
@@ -464,6 +463,7 @@ func change_buttons(catagory : String, index : int, pressed : bool):
 								if ii.is_in_group('Leather') and ii.is_in_group('Colour Selection Button'):
 									ii.hide()
 						else:
+							i.text = hood_options[13 + index]
 							for ii in get_tree().get_nodes_in_group('Muzzle Eyelets'):
 									ii.visible = index == 1
 							for ii in get_tree().get_nodes_in_group('Muzzle Detail B Colour'):
@@ -495,14 +495,12 @@ func change_buttons(catagory : String, index : int, pressed : bool):
 				
 				if i.button_index == index:
 					i.pressed = pressed
-				prints(catagory, index, pressed)
 				if catagory == "Muzzle Length":
 					if (i.is_in_group("Leather") and index == 0) and i.button_index == 1:
 						i.pressed = true
 				elif catagory == "Muzzle Detail B":
 					if i.is_in_group("Frisky"):
 						if i.is_in_group("4 Holes"):
-							print(index)
 							i.visible = index == 1
 					else:
 						if index == 4:

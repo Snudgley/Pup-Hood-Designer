@@ -1567,7 +1567,7 @@ size_flags_horizontal = 3
 margin_right = 2198.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 1 )
-text = "Neoprene Frisky Hood"
+text = "Neoprene Muzzle"
 valign = 1
 clip_text = true
 
