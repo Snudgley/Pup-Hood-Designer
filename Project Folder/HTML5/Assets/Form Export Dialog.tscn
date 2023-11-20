@@ -1,0 +1,352 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Assets/Export.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Switch Off.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Switch On.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Form TickBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Textures/Cross.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Barlow/Barlow-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.138, 0.138, 0.23, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.1037, 0.1037, 0.17, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.06, 0.06, 0.1, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color( 0.0244, 0.0244, 0.04, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 10.0
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.14564, 0.1342, 0.22, 1 )
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_left = 7.0
+content_margin_right = 7.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+expand_margin_left = 7.0
+expand_margin_right = 7.0
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0558, 0.0558, 0.09, 1 )
+border_width_left = 2
+border_width_top = 20
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.198, 0.18, 0.3, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+expand_margin_top = 20.0
+expand_margin_bottom = 2.0
+anti_aliasing = false
+
+[sub_resource type="Theme" id=9]
+default_font = SubResource( 2 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 0
+Button/fonts/font = SubResource( 2 )
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 16 )
+Button/styles/hover = SubResource( 6 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 7 )
+LineEdit/colors/clear_button_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 1, 1, 1, 1 )
+LineEdit/colors/font_color_selected = Color( 1, 1, 1, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+LineEdit/colors/selection_color = Color( 1, 0.466667, 0.466667, 1 )
+LineEdit/constants/minimum_spaces = 0
+LineEdit/fonts/font = SubResource( 2 )
+LineEdit/icons/clear = null
+LineEdit/styles/focus = SubResource( 8 )
+LineEdit/styles/normal = SubResource( 4 )
+LineEdit/styles/read_only = null
+Tree/colors/custom_button_font_highlight = Color( 0, 0, 0, 1 )
+Tree/colors/drop_position_color = Color( 0, 0, 0, 1 )
+Tree/colors/font_color = Color( 1, 1, 1, 1 )
+Tree/colors/font_color_selected = Color( 1, 1, 1, 1 )
+Tree/colors/guide_color = Color( 0, 0, 0, 1 )
+Tree/colors/relationship_line_color = Color( 0, 0, 0, 1 )
+Tree/colors/title_button_color = Color( 0, 0, 0, 1 )
+Tree/constants/button_margin = 0
+Tree/constants/draw_guides = 0
+Tree/constants/draw_relationship_lines = 0
+Tree/constants/hseparation = 0
+Tree/constants/item_margin = 0
+Tree/constants/scroll_border = 0
+Tree/constants/scroll_speed = 0
+Tree/constants/vseparation = 0
+Tree/fonts/font = SubResource( 2 )
+Tree/fonts/title_button_font = SubResource( 2 )
+Tree/icons/arrow = null
+Tree/icons/arrow_collapsed = null
+Tree/icons/checked = null
+Tree/icons/select_arrow = null
+Tree/icons/unchecked = null
+Tree/icons/updown = null
+Tree/styles/bg = SubResource( 5 )
+Tree/styles/bg_focus = null
+Tree/styles/button_pressed = null
+Tree/styles/cursor = null
+Tree/styles/cursor_unfocused = null
+Tree/styles/custom_button = null
+Tree/styles/custom_button_hover = null
+Tree/styles/custom_button_pressed = null
+Tree/styles/selected = null
+Tree/styles/selected_focus = null
+Tree/styles/title_button_hover = null
+Tree/styles/title_button_normal = null
+Tree/styles/title_button_pressed = null
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = SubResource( 12 )
+VScrollBar/styles/grabber_highlight = SubResource( 12 )
+VScrollBar/styles/grabber_pressed = SubResource( 12 )
+VScrollBar/styles/scroll = SubResource( 15 )
+VScrollBar/styles/scroll_focus = SubResource( 14 )
+WindowDialog/colors/title_color = Color( 1, 1, 1, 1 )
+WindowDialog/constants/close_h_ofs = 16
+WindowDialog/constants/close_v_ofs = 17
+WindowDialog/constants/scaleborder_size = 5
+WindowDialog/constants/title_height = 23
+WindowDialog/fonts/title_font = SubResource( 2 )
+WindowDialog/icons/close = ExtResource( 5 )
+WindowDialog/icons/close_highlight = ExtResource( 5 )
+WindowDialog/styles/panel = SubResource( 1 )
+
+[sub_resource type="ImageTexture" id=10]
+flags = 4
+storage = 2
+lossy_quality = 1.0
+flags = 4
+size = Vector2( 4400, 3400 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[node name="Export Dialog" type="WindowDialog"]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_min_size = Vector2( 600, 400 )
+theme = SubResource( 9 )
+popup_exclusive = true
+window_title = "Export Form"
+resizable = true
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+
+[node name="HBoxContainer" type="HSplitContainer" parent="VBoxContainer"]
+margin_right = 4400.0
+margin_bottom = 3315.0
+size_flags_vertical = 3
+custom_constants/separation = 10
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 4400.0
+margin_bottom = 3315.0
+rect_min_size = Vector2( 140, 0 )
+alignment = 1
+
+[node name="Final Render" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 4400.0
+margin_bottom = 3315.0
+size_flags_vertical = 3
+texture = SubResource( 10 )
+expand = true
+stretch_mode = 6
+flip_v = true
+
+[node name="Viewport" type="Viewport" parent="VBoxContainer/HBoxContainer/VBoxContainer2/Final Render"]
+size = Vector2( 4400, 3400 )
+hdr = false
+disable_3d = true
+usage = 1
+gui_disable_input = true
+
+[node name="Form TickBox" parent="VBoxContainer/HBoxContainer/VBoxContainer2/Final Render/Viewport" instance=ExtResource( 4 )]
+margin_left = 4265.0
+margin_top = 916.0
+margin_right = -43.0
+margin_bottom = -2392.0
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+margin_top = 3315.0
+margin_right = 4400.0
+margin_bottom = 3320.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 3320.0
+margin_right = 4400.0
+margin_bottom = 3365.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+margin_right = 4400.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Control3" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 5.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 5, 5 )
+
+[node name="File Name Box" type="LineEdit" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 9.0
+margin_right = 3522.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+placeholder_text = "Exported Form"
+
+[node name="SpinBox" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 3526.0
+margin_top = 10.0
+margin_right = 3560.0
+margin_bottom = 30.0
+text = ".PNG"
+
+[node name="Control4" type="Control" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 3564.0
+margin_right = 4266.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 5, 5 )
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="CheckBox" type="CheckButton" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 4270.0
+margin_right = 4399.0
+margin_bottom = 40.0
+custom_icons/off = ExtResource( 2 )
+custom_icons/on = ExtResource( 3 )
+custom_styles/focus = SubResource( 11 )
+pressed = true
+text = "Coloured"
+
+[node name="Control4" type="Control" parent="VBoxContainer/VBoxContainer"]
+margin_top = 40.0
+margin_right = 4400.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 3365.0
+margin_right = 4400.0
+margin_bottom = 3395.0
+
+[node name="Control3" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 1427.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Save" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 1431.0
+margin_right = 1475.0
+margin_bottom = 30.0
+text = "Save"
+
+[node name="Control2" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 1479.0
+margin_right = 2906.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Cancel" type="Button" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 2910.0
+margin_right = 2968.0
+margin_bottom = 30.0
+text = "Cancel"
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 2972.0
+margin_right = 4400.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+margin_top = 3395.0
+margin_right = 4400.0
+margin_bottom = 3400.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="VScrollBar" type="VScrollBar" parent="."]
+margin_right = 12.0
+margin_bottom = 97.0
+page = -2.806
+
+[connection signal="toggled" from="VBoxContainer/VBoxContainer/HBoxContainer/CheckBox" to="." method="_on_Colour_toggled"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Cancel" to="." method="_on_Cancel_pressed"]

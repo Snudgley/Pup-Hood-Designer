@@ -1,0 +1,232 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Textures/Woof/NEO611C Woof! Order Form 12.21.21.png" type="Texture" id=1]
+[ext_resource path="res://Materials/Decrypt Image Neoprene GLES2.material" type="Material" id=2]
+[ext_resource path="res://Scenes/Neo Colour Selector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Textures/Woof/LowResWoofForm.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Barlow/Barlow-Medium.ttf" type="DynamicFontData" id=16]
+
+[sub_resource type="DynamicFont" id=103]
+size = 48
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxEmpty" id=98]
+
+[sub_resource type="StyleBoxEmpty" id=99]
+
+[sub_resource type="StyleBoxFlat" id=100]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=101]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=102]
+
+[sub_resource type="Theme" id=104]
+default_font = SubResource( 103 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 103 )
+Button/styles/disabled = SubResource( 98 )
+Button/styles/focus = SubResource( 99 )
+Button/styles/hover = SubResource( 100 )
+Button/styles/normal = SubResource( 101 )
+Button/styles/pressed = SubResource( 102 )
+
+[sub_resource type="StyleBoxEmpty" id=105]
+
+[sub_resource type="StyleBoxEmpty" id=106]
+
+[sub_resource type="StyleBoxEmpty" id=62]
+
+[sub_resource type="StyleBoxEmpty" id=107]
+
+[node name="Woof" type="Node2D"]
+
+[node name="ColorRect" type="TextureRect" parent="."]
+material = ExtResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 4400.0
+margin_bottom = 3400.0
+mouse_filter = 2
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Preview Colour Selector" parent="ColorRect" instance=ExtResource( 4 )]
+texture = ExtResource( 5 )
+
+[node name="Colour selection" parent="ColorRect" groups=["1_2 Selection", "Base", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 721.0
+margin_right = 1282.0
+margin_bottom = 815.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Shiny"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Base"
+
+[node name="Colour selection2" parent="ColorRect" groups=["Brow", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 832.0
+margin_right = 1282.0
+margin_bottom = 926.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Brow"
+
+[node name="Colour selection9" parent="ColorRect" groups=["Colour Selection Button", "Nose"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 947.0
+margin_right = 1282.0
+margin_bottom = 1041.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Shiny"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Nose"
+
+[node name="Colour selection3" parent="ColorRect" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1055.0
+margin_right = 1282.0
+margin_bottom = 1149.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Muzzle"
+
+[node name="Colour selection4" parent="ColorRect" groups=["Chin", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1166.0
+margin_right = 1282.0
+margin_bottom = 1260.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Shiny"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Chin"
+
+[node name="Colour selection5" parent="ColorRect" groups=["Colour Selection Button", "Inner Chin"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1277.0
+margin_right = 1282.0
+margin_bottom = 1371.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Inner Chin"
+
+[node name="Colour selection6" parent="ColorRect" groups=["Colour Selection Button", "Tongue"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1394.0
+margin_right = 1282.0
+margin_bottom = 1488.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Red"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Tongue"
+
+[node name="Colour selection7" parent="ColorRect" groups=["Colour Selection Button", "Ear C"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1505.0
+margin_right = 1282.0
+margin_bottom = 1599.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Shiny"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Ear C"
+
+[node name="Colour selection8" parent="ColorRect" groups=["Colour Selection Button", "Ear B"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1616.0
+margin_right = 1282.0
+margin_bottom = 1710.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Shiny"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Ear B"

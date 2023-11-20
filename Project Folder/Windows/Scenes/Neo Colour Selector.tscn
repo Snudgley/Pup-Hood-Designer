@@ -1,0 +1,330 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Fonts/Barlow/Barlow-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Brown.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Royal.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Shiny.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Matte.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Hunter.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Camo.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Purple.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Pink.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Navy.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Cobalt.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Grey.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Aqua.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/White.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Textured.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Orange.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Lime.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Red.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Colour Overlays/Neoprene/Yellow.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/Hood Colour Button Popup.gd" type="Script" id=20]
+
+[sub_resource type="DynamicFont" id=51]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=58]
+
+[sub_resource type="StyleBoxEmpty" id=59]
+
+[sub_resource type="StyleBoxFlat" id=60]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=55]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=56]
+
+[sub_resource type="Theme" id=33]
+default_font = SubResource( 51 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 51 )
+Button/styles/disabled = SubResource( 58 )
+Button/styles/focus = SubResource( 59 )
+Button/styles/hover = SubResource( 60 )
+Button/styles/normal = SubResource( 55 )
+Button/styles/pressed = SubResource( 56 )
+
+[sub_resource type="StyleBoxEmpty" id=61]
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxEmpty" id=62]
+
+[sub_resource type="StyleBoxEmpty" id=35]
+
+[sub_resource type="StyleBoxFlat" id=57]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[node name="Button" type="Button"]
+margin_right = 500.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 0 )
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 61 )
+custom_styles/pressed = SubResource( 34 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 35 )
+text = "White"
+script = ExtResource( 20 )
+
+[node name="Popup" type="Popup" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="Popup"]
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 0 )
+custom_styles/panel = SubResource( 57 )
+
+[node name="This Label sets Width" type="Label" parent="Popup/PanelContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 10.0
+margin_top = 609.0
+margin_right = 365.0
+margin_bottom = 667.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Textured------[ ]"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/PanelContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 365.0
+margin_bottom = 1266.0
+
+[node name="Red" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_right = 355.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Red"
+icon = ExtResource( 18 )
+expand_icon = true
+
+[node name="Orange" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 70.0
+margin_right = 355.0
+margin_bottom = 136.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Orange"
+icon = ExtResource( 16 )
+expand_icon = true
+
+[node name="Yellow" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 140.0
+margin_right = 355.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Yellow"
+icon = ExtResource( 19 )
+expand_icon = true
+
+[node name="Lime" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 210.0
+margin_right = 355.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Lime"
+icon = ExtResource( 17 )
+expand_icon = true
+
+[node name="Hunter" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 280.0
+margin_right = 355.0
+margin_bottom = 346.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Hunter"
+icon = ExtResource( 6 )
+expand_icon = true
+
+[node name="Aqua" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 350.0
+margin_right = 355.0
+margin_bottom = 416.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Aqua"
+icon = ExtResource( 13 )
+expand_icon = true
+
+[node name="Cobalt" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 420.0
+margin_right = 355.0
+margin_bottom = 486.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Cobalt"
+icon = ExtResource( 11 )
+expand_icon = true
+
+[node name="Royal" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 490.0
+margin_right = 355.0
+margin_bottom = 556.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Royal"
+icon = ExtResource( 3 )
+expand_icon = true
+
+[node name="Navy" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 560.0
+margin_right = 355.0
+margin_bottom = 626.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Navy"
+icon = ExtResource( 10 )
+expand_icon = true
+
+[node name="Purple" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 630.0
+margin_right = 355.0
+margin_bottom = 696.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Purple"
+icon = ExtResource( 8 )
+expand_icon = true
+
+[node name="Pink" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 700.0
+margin_right = 355.0
+margin_bottom = 766.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pink"
+icon = ExtResource( 9 )
+expand_icon = true
+
+[node name="White" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 770.0
+margin_right = 355.0
+margin_bottom = 836.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "White"
+icon = ExtResource( 14 )
+expand_icon = true
+
+[node name="Grey" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 840.0
+margin_right = 355.0
+margin_bottom = 906.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Grey"
+icon = ExtResource( 12 )
+expand_icon = true
+
+[node name="Shiny" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 910.0
+margin_right = 355.0
+margin_bottom = 976.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Shiny"
+icon = ExtResource( 4 )
+expand_icon = true
+
+[node name="Matte" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 980.0
+margin_right = 355.0
+margin_bottom = 1046.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Matte"
+icon = ExtResource( 5 )
+expand_icon = true
+
+[node name="Textured" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 1050.0
+margin_right = 355.0
+margin_bottom = 1116.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Textured"
+icon = ExtResource( 15 )
+expand_icon = true
+
+[node name="Camo" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 1120.0
+margin_right = 355.0
+margin_bottom = 1186.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Camo"
+icon = ExtResource( 7 )
+expand_icon = true
+
+[node name="Brown" type="Button" parent="Popup/PanelContainer/VBoxContainer"]
+margin_top = 1190.0
+margin_right = 355.0
+margin_bottom = 1256.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Brown"
+icon = ExtResource( 2 )
+expand_icon = true
+
+[connection signal="pressed" from="." to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Red" to="." method="_colour_selected" binds= [ 0 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Orange" to="." method="_colour_selected" binds= [ 1 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Yellow" to="." method="_colour_selected" binds= [ 2 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Lime" to="." method="_colour_selected" binds= [ 3 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Hunter" to="." method="_colour_selected" binds= [ 4 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Aqua" to="." method="_colour_selected" binds= [ 5 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Cobalt" to="." method="_colour_selected" binds= [ 6 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Royal" to="." method="_colour_selected" binds= [ 7 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Navy" to="." method="_colour_selected" binds= [ 8 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Purple" to="." method="_colour_selected" binds= [ 9 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Pink" to="." method="_colour_selected" binds= [ 10 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/White" to="." method="_colour_selected" binds= [ 11 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Grey" to="." method="_colour_selected" binds= [ 12 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Shiny" to="." method="_colour_selected" binds= [ 13 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Matte" to="." method="_colour_selected" binds= [ 14 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Textured" to="." method="_colour_selected" binds= [ 15 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Camo" to="." method="_colour_selected" binds= [ 16 ]]
+[connection signal="pressed" from="Popup/PanelContainer/VBoxContainer/Brown" to="." method="_colour_selected" binds= [ 17 ]]
