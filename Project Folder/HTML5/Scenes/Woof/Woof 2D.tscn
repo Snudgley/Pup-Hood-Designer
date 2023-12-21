@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Materials/Decrypt Image Neoprene GLES2.material" type="Material" id=1]
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Materials/Designer Colour Picker.theme" type="Theme" id=3]
+[ext_resource path="res://Materials/Decrypt Image Base.material" type="Material" id=4]
+[ext_resource path="res://Textures/Woof/Preview/Base.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Woof/Preview/LowRes.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Woof/Preview/Body.png" type="Texture" id=8]
+
+[node name="Woof 2D" type="TextureRect" groups=["Neoprene Woof Hood"]]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Behind" type="TextureRect" parent="."]
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Preview Colour Selector" parent="." instance=ExtResource( 2 )]
+theme = ExtResource( 3 )
+texture = ExtResource( 7 )
+top_layer = true

@@ -1,0 +1,1210 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://Assets/Neo Colour Selector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Option Selector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/Barlow/Barlow-Medium.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/Barlow/Barlow-SemiBold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/Barlow/Barlow-ExtraBold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Textures/Drop Down.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=20]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="ImageTexture" id=47]
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0.37, 0.37, 0.37, 1 )
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=49]
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.301961, 0.301961, 0.301961, 1 )
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=51]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="StyleBoxEmpty" id=52]
+
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0.37, 0.37, 0.37, 1 )
+border_width_left = 1
+border_width_right = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=54]
+border_width_left = 1
+border_width_right = 1
+border_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=55]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.0980392, 0.0941176, 0.121569, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+anti_aliasing = false
+
+[sub_resource type="Theme" id=56]
+HScrollBar/icons/decrement = SubResource( 47 )
+HScrollBar/icons/decrement_highlight = SubResource( 47 )
+HScrollBar/icons/decrement_pressed = SubResource( 47 )
+HScrollBar/icons/increment = SubResource( 47 )
+HScrollBar/icons/increment_highlight = SubResource( 47 )
+HScrollBar/icons/increment_pressed = SubResource( 47 )
+HScrollBar/styles/grabber = SubResource( 48 )
+HScrollBar/styles/grabber_highlight = SubResource( 49 )
+HScrollBar/styles/grabber_pressed = SubResource( 50 )
+HScrollBar/styles/scroll = SubResource( 51 )
+HScrollBar/styles/scroll_focus = SubResource( 52 )
+VScrollBar/icons/decrement = SubResource( 47 )
+VScrollBar/icons/decrement_highlight = SubResource( 47 )
+VScrollBar/icons/decrement_pressed = SubResource( 47 )
+VScrollBar/icons/increment = SubResource( 47 )
+VScrollBar/icons/increment_highlight = SubResource( 47 )
+VScrollBar/icons/increment_pressed = SubResource( 47 )
+VScrollBar/styles/grabber = SubResource( 53 )
+VScrollBar/styles/grabber_highlight = SubResource( 54 )
+VScrollBar/styles/grabber_pressed = SubResource( 50 )
+VScrollBar/styles/scroll = SubResource( 55 )
+VScrollBar/styles/scroll_focus = SubResource( 52 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=58]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxEmpty" id=59]
+
+[sub_resource type="StyleBoxEmpty" id=60]
+
+[sub_resource type="StyleBoxFlat" id=61]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=62]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=63]
+
+[sub_resource type="Theme" id=9]
+default_font = SubResource( 58 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 58 )
+Button/styles/disabled = SubResource( 59 )
+Button/styles/focus = SubResource( 60 )
+Button/styles/hover = SubResource( 61 )
+Button/styles/normal = SubResource( 62 )
+Button/styles/pressed = SubResource( 63 )
+
+[sub_resource type="StyleBoxFlat" id=57]
+bg_color = Color( 0.26709, 0.26709, 0.26709, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.2, 0.2, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.1, 0.1, 0.1, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=199]
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxEmpty" id=200]
+
+[sub_resource type="StyleBoxEmpty" id=201]
+
+[sub_resource type="StyleBoxFlat" id=202]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=203]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=204]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="Theme" id=33]
+default_font = SubResource( 199 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 199 )
+Button/styles/disabled = SubResource( 200 )
+Button/styles/focus = SubResource( 201 )
+Button/styles/hover = SubResource( 202 )
+Button/styles/normal = SubResource( 203 )
+Button/styles/pressed = SubResource( 204 )
+
+[sub_resource type="StyleBoxEmpty" id=198]
+
+[node name="K9 Options" type="VBoxContainer" groups=["Neoprene K9 Hood"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="."]
+margin_right = 800.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 20 )
+text = "Neoprene K9 Hood"
+valign = 1
+clip_text = true
+
+[node name="Control" type="ScrollContainer" parent="."]
+margin_top = 52.0
+margin_right = 800.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+theme = SubResource( 56 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_right = 790.0
+margin_bottom = 1500.0
+mouse_filter = 2
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="Control/VBoxContainer"]
+margin_right = 790.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Hood Base" type="Label" parent="Control/VBoxContainer"]
+margin_top = 10.0
+margin_right = 790.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 2 )
+text = "1. Hood Base"
+
+[node name="Hood Base Button" parent="Control/VBoxContainer" groups=["Base", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_top = 32.0
+margin_right = 790.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 100, 30 )
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Shiny"
+node_group = "Base"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Hood Base Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control2" type="Control" parent="Control/VBoxContainer"]
+margin_top = 62.0
+margin_right = 790.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Crown" type="Label" parent="Control/VBoxContainer"]
+margin_top = 72.0
+margin_right = 790.0
+margin_bottom = 94.0
+custom_fonts/font = SubResource( 2 )
+text = "2. Crown/Neck"
+
+[node name="Crown Button" parent="Control/VBoxContainer" groups=["Colour Selection Button", "CrownNeck"] instance=ExtResource( 3 )]
+margin_top = 94.0
+margin_right = 790.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 100, 30 )
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Shiny"
+node_group = "CrownNeck"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Crown Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control3" type="Control" parent="Control/VBoxContainer"]
+margin_top = 124.0
+margin_right = 790.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Brows" type="Label" parent="Control/VBoxContainer"]
+margin_top = 134.0
+margin_right = 790.0
+margin_bottom = 156.0
+custom_fonts/font = SubResource( 2 )
+text = "3. Brows"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 156.0
+margin_right = 790.0
+margin_bottom = 186.0
+custom_constants/separation = 20
+
+[node name="Button" parent="Control/VBoxContainer/HBoxContainer2" groups=["Hood Option Button", "Preview"] instance=ExtResource( 4 )]
+margin_right = 385.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "Double"
+node_group = "Brow Style"
+
+[node name="Brows" parent="Control/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer" index="1"]
+visible = true
+
+[node name="Standard" parent="Control/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Ears" index="0"]
+text = "Puppy"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer2/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Brows Button" parent="Control/VBoxContainer/HBoxContainer2" groups=["Brow", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_left = 405.0
+margin_right = 790.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+node_group = "Brow"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer2/Brows Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control4" type="Control" parent="Control/VBoxContainer"]
+margin_top = 186.0
+margin_right = 790.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Bridge" type="Label" parent="Control/VBoxContainer"]
+margin_top = 196.0
+margin_right = 790.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 2 )
+text = "4. Bridge"
+
+[node name="Bridge Button" parent="Control/VBoxContainer" groups=["Bridge", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_top = 218.0
+margin_right = 790.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+node_group = "Bridge"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Bridge Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control5" type="Control" parent="Control/VBoxContainer"]
+margin_top = 248.0
+margin_right = 790.0
+margin_bottom = 258.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Nose" type="Label" parent="Control/VBoxContainer"]
+margin_top = 258.0
+margin_right = 790.0
+margin_bottom = 280.0
+custom_fonts/font = SubResource( 2 )
+text = "5. Nose"
+
+[node name="Nose Button" parent="Control/VBoxContainer" groups=["Colour Selection Button", "Nose"] instance=ExtResource( 3 )]
+margin_top = 280.0
+margin_right = 790.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Shiny"
+node_group = "Nose"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Nose Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control6" type="Control" parent="Control/VBoxContainer"]
+margin_top = 310.0
+margin_right = 790.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle" type="Label" parent="Control/VBoxContainer"]
+margin_top = 320.0
+margin_right = 790.0
+margin_bottom = 342.0
+custom_fonts/font = SubResource( 2 )
+text = "6. Muzzle"
+
+[node name="Muzzle Button" parent="Control/VBoxContainer" groups=["Colour Selection Button", "Muzzle"] instance=ExtResource( 3 )]
+margin_top = 342.0
+margin_right = 790.0
+margin_bottom = 372.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+node_group = "Muzzle"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Muzzle Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control7" type="Control" parent="Control/VBoxContainer"]
+margin_top = 372.0
+margin_right = 790.0
+margin_bottom = 382.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Chin" type="Label" parent="Control/VBoxContainer"]
+margin_top = 382.0
+margin_right = 790.0
+margin_bottom = 404.0
+custom_fonts/font = SubResource( 2 )
+text = "7. Muzzle Lip"
+
+[node name="Muzzle Lip Button" parent="Control/VBoxContainer" groups=["Colour Selection Button", "Lip"] instance=ExtResource( 3 )]
+margin_top = 404.0
+margin_right = 790.0
+margin_bottom = 434.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+node_group = "Lip"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Muzzle Lip Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control8" type="Control" parent="Control/VBoxContainer"]
+margin_top = 434.0
+margin_right = 790.0
+margin_bottom = 444.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Chin2" type="Label" parent="Control/VBoxContainer"]
+margin_top = 444.0
+margin_right = 790.0
+margin_bottom = 466.0
+custom_fonts/font = SubResource( 2 )
+text = "8 Chin"
+
+[node name="Chin Button" parent="Control/VBoxContainer" groups=["Chin", "Colour Selection Button"] instance=ExtResource( 3 )]
+margin_top = 466.0
+margin_right = 790.0
+margin_bottom = 496.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Shiny"
+node_group = "Chin"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Chin Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control10" type="Control" parent="Control/VBoxContainer"]
+margin_top = 496.0
+margin_right = 790.0
+margin_bottom = 506.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Ear Details" type="Label" parent="Control/VBoxContainer"]
+margin_top = 506.0
+margin_right = 790.0
+margin_bottom = 528.0
+custom_fonts/font = SubResource( 2 )
+text = "9. Ear Details"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 528.0
+margin_right = 790.0
+margin_bottom = 766.0
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="Control/VBoxContainer/HBoxContainer"]
+margin_right = 20.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer"]
+margin_left = 20.0
+margin_right = 790.0
+margin_bottom = 238.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="Style" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 770.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "Style"
+
+[node name="Button11" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 4 )]
+margin_top = 22.0
+margin_right = 770.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "Standard"
+node_group = "Ear Style"
+
+[node name="Ears" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/Button11/Popup/PanelContainer/VBoxContainer" index="2"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/Button11"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control11" type="Control" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 770.0
+margin_bottom = 62.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Inside3" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 62.0
+margin_right = 770.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 2 )
+text = "Inside"
+
+[node name="Ear A Button" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Colour Selection Button", "Ear A"] instance=ExtResource( 3 )]
+margin_top = 84.0
+margin_right = 770.0
+margin_bottom = 114.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+node_group = "Ear A"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/Ear A Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control13" type="Control" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 114.0
+margin_right = 770.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Inner Ear" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 124.0
+margin_right = 770.0
+margin_bottom = 146.0
+custom_fonts/font = SubResource( 2 )
+text = "Inner Ear"
+
+[node name="Ear B Button" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Colour Selection Button", "Ear B"] instance=ExtResource( 3 )]
+margin_top = 146.0
+margin_right = 770.0
+margin_bottom = 176.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Shiny"
+node_group = "Ear B"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/Ear B Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control12" type="Control" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 176.0
+margin_right = 770.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Outside" type="Label" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 186.0
+margin_right = 770.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 2 )
+text = "Outside"
+
+[node name="Ear C Button" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer" groups=["Colour Selection Button", "Ear C"] instance=ExtResource( 3 )]
+margin_top = 208.0
+margin_right = 770.0
+margin_bottom = 238.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+text = "Shiny"
+node_group = "Ear C"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer/VBoxContainer/Ear C Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control13" type="Control" parent="Control/VBoxContainer"]
+margin_top = 766.0
+margin_right = 790.0
+margin_bottom = 776.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Details" type="Label" parent="Control/VBoxContainer"]
+margin_top = 776.0
+margin_right = 790.0
+margin_bottom = 798.0
+custom_fonts/font = SubResource( 2 )
+text = "10. Muzzle Details"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 798.0
+margin_right = 790.0
+margin_bottom = 914.0
+custom_constants/separation = 0
+
+[node name="Control" type="Control" parent="Control/VBoxContainer/HBoxContainer3"]
+margin_right = 20.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 20, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/HBoxContainer3"]
+margin_left = 20.0
+margin_right = 790.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+
+[node name="Jowl" type="Label" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_right = 770.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 2 )
+text = "Jowl"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_top = 26.0
+margin_right = 770.0
+margin_bottom = 56.0
+custom_constants/separation = 20
+
+[node name="Button" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 4 )]
+margin_right = 375.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "No"
+node_group = "Jowl"
+
+[node name="Y-N" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Button/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl Button" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer" groups=["Colour Selection Button", "Jowl Colour", "Sub Selection"] instance=ExtResource( 3 )]
+margin_left = 395.0
+margin_right = 770.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+disabled = true
+node_group = "Jowl Colour"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Jowl Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Details3" type="Label" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_top = 60.0
+margin_right = 770.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 2 )
+text = "Secondary Detail"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer"]
+margin_top = 86.0
+margin_right = 770.0
+margin_bottom = 116.0
+custom_constants/separation = 20
+
+[node name="Button" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2" groups=["Hood Option Button", "K9", "Muzzle Detail B", "Preview"] instance=ExtResource( 4 )]
+margin_right = 375.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "7 Holes"
+node_group = "Muzzle Detail B"
+
+[node name="Muzzle Detail" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer" index="5"]
+visible = true
+
+[node name="4 Holes" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button/Popup/PanelContainer/VBoxContainer/Muzzle Detail" index="4"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_right = -11.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Detail B Button" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2" groups=["Colour Selection Button", "Muzzle Detail B Colour", "Sub Selection"] instance=ExtResource( 3 )]
+margin_left = 395.0
+margin_right = 770.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 100, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+disabled = true
+text = "Shiny"
+node_group = "Muzzle Detail B Colour"
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Muzzle Detail B Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control11" type="Control" parent="Control/VBoxContainer"]
+margin_top = 914.0
+margin_right = 790.0
+margin_bottom = 924.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Muzzle Length" type="Label" parent="Control/VBoxContainer"]
+margin_top = 924.0
+margin_right = 790.0
+margin_bottom = 946.0
+custom_fonts/font = SubResource( 2 )
+text = "Muzzle Length"
+
+[node name="Muzzle Length Button" parent="Control/VBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 4 )]
+margin_top = 946.0
+margin_right = 790.0
+margin_bottom = 976.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "Standard"
+node_group = "Muzzle Length"
+
+[node name="Muzzle Length" parent="Control/VBoxContainer/Muzzle Length Button/Popup/PanelContainer/VBoxContainer" index="3"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Muzzle Length Button"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control12" type="Control" parent="Control/VBoxContainer"]
+margin_top = 976.0
+margin_right = 790.0
+margin_bottom = 986.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Eyeglass Slots" type="Label" parent="Control/VBoxContainer"]
+margin_top = 986.0
+margin_right = 790.0
+margin_bottom = 1008.0
+custom_fonts/font = SubResource( 2 )
+text = "Eyeglass Slots"
+
+[node name="Button10" parent="Control/VBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 4 )]
+margin_top = 1008.0
+margin_right = 790.0
+margin_bottom = 1038.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "No"
+node_group = "Eyeglass Slots"
+
+[node name="Y-N" parent="Control/VBoxContainer/Button10/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Button10"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control15" type="Control" parent="Control/VBoxContainer"]
+margin_top = 1038.0
+margin_right = 790.0
+margin_bottom = 1048.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Ear Holes2" type="Label" parent="Control/VBoxContainer"]
+margin_top = 1048.0
+margin_right = 790.0
+margin_bottom = 1070.0
+custom_fonts/font = SubResource( 2 )
+text = "Ear Holes"
+
+[node name="Button11" parent="Control/VBoxContainer" groups=["Hood Option Button", "Preview"] instance=ExtResource( 4 )]
+margin_top = 1070.0
+margin_right = 790.0
+margin_bottom = 1100.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+theme = SubResource( 33 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 0.156863 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 198 )
+custom_styles/normal = SubResource( 10 )
+text = "No"
+node_group = "Ear Holes"
+
+[node name="Y-N" parent="Control/VBoxContainer/Button11/Popup/PanelContainer/VBoxContainer" index="4"]
+visible = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/VBoxContainer/Button11"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_right = -13.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Control14" type="Control" parent="Control/VBoxContainer"]
+margin_top = 1100.0
+margin_right = 790.0
+margin_bottom = 1500.0
+rect_min_size = Vector2( 0, 400 )
+
+[editable path="Control/VBoxContainer/HBoxContainer2/Button"]
+[editable path="Control/VBoxContainer/HBoxContainer/VBoxContainer/Button11"]
+[editable path="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer/Button"]
+[editable path="Control/VBoxContainer/HBoxContainer3/VBoxContainer/HBoxContainer2/Button"]
+[editable path="Control/VBoxContainer/Muzzle Length Button"]
+[editable path="Control/VBoxContainer/Button10"]
+[editable path="Control/VBoxContainer/Button11"]

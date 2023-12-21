@@ -1,0 +1,417 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Materials/Designer Colour Picker.theme" type="Theme" id=2]
+[ext_resource path="res://Materials/Decrypt Image Base.material" type="Material" id=3]
+[ext_resource path="res://Materials/Decrypt Image Neoprene GLES2.material" type="Material" id=4]
+[ext_resource path="res://Textures/Muzzle/K9/Muzzle Short.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Muzzle/K9/Eyelets Standard.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Muzzle/K9/Muzzle Standard.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Muzzle/Preview_Base.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Muzzle/K9/Whiskers Standard.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Muzzle/K9/Whiskers Short.png" type="Texture" id=10]
+[ext_resource path="res://Textures/Muzzle/K9/Eyelets Short.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Muzzle/K9/7 Holes Long.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Muzzle/K9/Fur Standard.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Muzzle/Frisky/Eyelets.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Muzzle/LowRes/Fur Standard.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Muzzle/LowRes/K9 Muzzle Long.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Muzzle/LowRes/Jowl.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Muzzle/Frisky/Muzzle.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Muzzle/LowRes/Preview_Base.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Muzzle/K9/Fur Long.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Muzzle/K9/Fur Short.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Muzzle/LowRes/Frisky Muzzle.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Muzzle/Puppy/Muzzle.png" type="Texture" id=23]
+[ext_resource path="res://Textures/Muzzle/LowRes/Fur Short.png" type="Texture" id=24]
+[ext_resource path="res://Textures/Muzzle/LowRes/Whiskers Standard.png" type="Texture" id=25]
+[ext_resource path="res://Textures/Muzzle/LowRes/Whiskers Short.png" type="Texture" id=26]
+[ext_resource path="res://Textures/Muzzle/LowRes/Whiskers Long.png" type="Texture" id=27]
+[ext_resource path="res://Textures/Muzzle/K9/Whiskers Long.png" type="Texture" id=28]
+[ext_resource path="res://Textures/Muzzle/K9/7 Holes Standard.png" type="Texture" id=29]
+[ext_resource path="res://Textures/Muzzle/K9/7 Holes Short.png" type="Texture" id=30]
+[ext_resource path="res://Textures/Muzzle/K9/Muzzle Long.png" type="Texture" id=31]
+[ext_resource path="res://Textures/Muzzle/Jowl.png" type="Texture" id=32]
+[ext_resource path="res://Textures/Muzzle/LowRes/Fur Long.png" type="Texture" id=33]
+[ext_resource path="res://Textures/Muzzle/K9/Eyelets Long.png" type="Texture" id=34]
+[ext_resource path="res://Textures/Muzzle/LowRes/K9 Muzzle Short.png" type="Texture" id=35]
+[ext_resource path="res://Textures/Muzzle/LowRes/K9 Muzzle Standard.png" type="Texture" id=36]
+[ext_resource path="res://Textures/Muzzle/Frisky/4 Holes.png" type="Texture" id=37]
+[ext_resource path="res://Textures/Muzzle/LowRes/Puppy Muzzle.png" type="Texture" id=38]
+
+[node name="Muzzle 2D" type="TextureRect" groups=["Neoprene Muzzle"]]
+material = ExtResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Frisky Muzzle" type="Control" parent="." groups=["Frisky Muzzle", "Muzzle Preview", "Preview"]]
+visible = false
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Standard" type="Control" parent="Frisky Muzzle" groups=["Muzzle Base", "Muzzle Standard", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="Frisky Muzzle/Standard" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Frisky Muzzle/Standard"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Frisky Muzzle/Standard/Muzzle Extra" groups=["Eyelets", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="4 Holes" type="TextureRect" parent="Frisky Muzzle/Standard/Muzzle Extra" groups=["4 Holes", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 37 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl" type="TextureRect" parent="Frisky Muzzle" groups=["Jowl", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 32 )
+expand = true
+stretch_mode = 6
+
+[node name="K9 Muzzle" type="Control" parent="." groups=["K9 Muzzle", "Muzzle Preview", "Preview"]]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Short" type="Control" parent="K9 Muzzle" groups=["Muzzle Base", "Muzzle Short", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="K9 Muzzle/Short" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="K9 Muzzle/Short"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="K9 Muzzle/Short/Muzzle Extra" groups=["Eyelets", "Muzzle Detail B", "Neo K9", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="7 Holes" type="TextureRect" parent="K9 Muzzle/Short/Muzzle Extra" groups=["7 Holes", "Muzzle Detail B", "Neo K9", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 30 )
+expand = true
+stretch_mode = 6
+
+[node name="Whiskers" type="TextureRect" parent="K9 Muzzle/Short/Muzzle Extra" groups=["Muzzle Detail B", "Neo K9", "Preview", "Whiskers"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="Fur" type="TextureRect" parent="K9 Muzzle/Short/Muzzle Extra" groups=["Fur", "Muzzle Detail B", "Neo K9", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 21 )
+expand = true
+stretch_mode = 6
+
+[node name="Standard" type="Control" parent="K9 Muzzle" groups=["Muzzle Base", "Muzzle Standard", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="K9 Muzzle/Standard" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="K9 Muzzle/Standard"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="K9 Muzzle/Standard/Muzzle Extra" groups=["Eyelets", "Muzzle Detail B", "Neo K9", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="7 Holes" type="TextureRect" parent="K9 Muzzle/Standard/Muzzle Extra" groups=["7 Holes", "Muzzle Detail B", "Neo K9", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 29 )
+expand = true
+stretch_mode = 6
+
+[node name="Whiskers" type="TextureRect" parent="K9 Muzzle/Standard/Muzzle Extra" groups=["Muzzle Detail B", "Neo K9", "Preview", "Whiskers"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Fur" type="TextureRect" parent="K9 Muzzle/Standard/Muzzle Extra" groups=["Fur", "Muzzle Detail B", "Neo K9", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 6
+
+[node name="Long" type="Control" parent="K9 Muzzle" groups=["Muzzle Base", "Muzzle Long", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Muzzle" type="TextureRect" parent="K9 Muzzle/Long" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 31 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="K9 Muzzle/Long"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="K9 Muzzle/Long/Muzzle Extra" groups=["Eyelets", "Muzzle Detail B", "Neo K9", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 34 )
+expand = true
+stretch_mode = 6
+
+[node name="7 Holes" type="TextureRect" parent="K9 Muzzle/Long/Muzzle Extra" groups=["7 Holes", "Muzzle Detail B", "Neo K9", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 6
+
+[node name="Whiskers" type="TextureRect" parent="K9 Muzzle/Long/Muzzle Extra" groups=["Muzzle Detail B", "Neo K9", "Preview", "Whiskers"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 28 )
+expand = true
+stretch_mode = 6
+
+[node name="Fur" type="TextureRect" parent="K9 Muzzle/Long/Muzzle Extra" groups=["Fur", "Muzzle Detail B", "Neo K9", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl" type="TextureRect" parent="K9 Muzzle" groups=["Jowl", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 32 )
+expand = true
+stretch_mode = 6
+
+[node name="Puppy Muzzle" type="Control" parent="." groups=["Muzzle Preview", "Preview", "Puppy Muzzle"]]
+visible = false
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Muzzle" type="TextureRect" parent="Puppy Muzzle" groups=["Muzzle", "Muzzle Standard"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 6
+
+[node name="Preview Colour Selector" parent="." instance=ExtResource( 1 )]
+theme = ExtResource( 2 )
+texture = ExtResource( 19 )
+
+[node name="K9 Muzzle" type="Control" parent="Preview Colour Selector" groups=["K9 Muzzle", "Muzzle Preview", "Preview"]]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="K9 Muzzle Long" parent="Preview Colour Selector/K9 Muzzle" groups=["Muzzle Base", "Muzzle Long", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../..")
+theme = ExtResource( 2 )
+texture = ExtResource( 16 )
+
+[node name="Fur" parent="Preview Colour Selector/K9 Muzzle/K9 Muzzle Long" groups=["Fur", "Muzzle Detail B", "Muzzle Long", "Neo K9", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 2 )
+texture = ExtResource( 33 )
+
+[node name="Whiskers" parent="Preview Colour Selector/K9 Muzzle/K9 Muzzle Long" groups=["Muzzle Detail B", "Muzzle Long", "Neo K9", "Preview", "Whiskers"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Fur")
+theme = ExtResource( 2 )
+texture = ExtResource( 27 )
+
+[node name="K9 Muzzle Short" parent="Preview Colour Selector/K9 Muzzle" groups=["Muzzle Base", "Muzzle Short", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../K9 Muzzle Long/Whiskers")
+theme = ExtResource( 2 )
+texture = ExtResource( 35 )
+
+[node name="Fur" parent="Preview Colour Selector/K9 Muzzle/K9 Muzzle Short" groups=["Fur", "Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 2 )
+texture = ExtResource( 24 )
+
+[node name="Whiskers" parent="Preview Colour Selector/K9 Muzzle/K9 Muzzle Short" groups=["Muzzle Detail B", "Muzzle Short", "Neo K9", "Preview", "Whiskers"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Fur")
+theme = ExtResource( 2 )
+texture = ExtResource( 26 )
+
+[node name="K9 Muzzle Standard" parent="Preview Colour Selector/K9 Muzzle" groups=["Muzzle Base", "Muzzle Standard", "Preview"] instance=ExtResource( 1 )]
+focus_next = NodePath("../K9 Muzzle Short/Whiskers")
+theme = ExtResource( 2 )
+texture = ExtResource( 36 )
+
+[node name="Fur" parent="Preview Colour Selector/K9 Muzzle/K9 Muzzle Standard" groups=["Fur", "Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 2 )
+texture = ExtResource( 15 )
+
+[node name="Whiskers" parent="Preview Colour Selector/K9 Muzzle/K9 Muzzle Standard" groups=["Muzzle Detail B", "Muzzle Standard", "Neo K9", "Preview", "Whiskers"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Fur")
+theme = ExtResource( 2 )
+texture = ExtResource( 25 )
+
+[node name="Frisky Muzzle" parent="Preview Colour Selector" groups=["Frisky Muzzle", "Muzzle Preview", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../K9 Muzzle/K9 Muzzle Standard/Whiskers")
+theme = ExtResource( 2 )
+texture = ExtResource( 22 )
+
+[node name="Jowl" parent="Preview Colour Selector" groups=["Jowl", "Preview"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Frisky Muzzle")
+theme = ExtResource( 2 )
+texture = ExtResource( 17 )
+
+[node name="Puppy Muzzle" parent="Preview Colour Selector" groups=["Muzzle Preview", "Preview", "Puppy Muzzle"] instance=ExtResource( 1 )]
+visible = false
+focus_next = NodePath("../Jowl")
+theme = ExtResource( 2 )
+texture = ExtResource( 38 )
+top_layer = true

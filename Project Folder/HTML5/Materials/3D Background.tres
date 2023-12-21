@@ -1,0 +1,15 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type spatial;
+render_mode cull_front, unshaded;
+
+float random (float y) {
+    return fract(sin(y *
+        12.9898) * 43758.5453123);
+}
+
+void fragment() {
+	float uvy = mix(0.0,0.15, (random(UV.y) * 0.05) + UV.y * 2.0 - 1.0);
+	ALBEDO = vec3(uvy);
+}"

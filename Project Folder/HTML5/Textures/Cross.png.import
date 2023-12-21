@@ -2,27 +2,29 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cross.png-0d3a2d5b88ed4bb2cdd151ffc6787e05.stex"
+path.s3tc="res://.import/Cross.png-0d3a2d5b88ed4bb2cdd151ffc6787e05.s3tc.stex"
+path.etc2="res://.import/Cross.png-0d3a2d5b88ed4bb2cdd151ffc6787e05.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Cross.png"
-dest_files=[ "res://.import/Cross.png-0d3a2d5b88ed4bb2cdd151ffc6787e05.stex" ]
+dest_files=[ "res://.import/Cross.png-0d3a2d5b88ed4bb2cdd151ffc6787e05.s3tc.stex", "res://.import/Cross.png-0d3a2d5b88ed4bb2cdd151ffc6787e05.etc2.stex" ]
 
 [params]
 
-compress/mode=0
-compress/lossy_quality=0.7
+compress/mode=2
+compress/lossy_quality=0.0
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
-flags/anisotropic=true
+flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
@@ -31,5 +33,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

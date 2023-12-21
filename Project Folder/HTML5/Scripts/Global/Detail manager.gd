@@ -115,12 +115,6 @@ const textures = {
 		]
 	}
 
-const black_snaps = preload('res://Textures/Colour Overlays/Leather/Snaps/Black.png')
-const silver_snaps = preload('res://Textures/Colour Overlays/Leather/Snaps/Silver.png')
-const brass_snaps = preload('res://Textures/Colour Overlays/Leather/Snaps/Brass.png')
-
-const snaps_textures = [black_snaps, silver_snaps, brass_snaps]
-
 const names = {
 	"Red" : [
 		"Red",
@@ -236,52 +230,76 @@ const names = {
 		]
 	}
 
+const node_groups = [
+	"Base", 
+	"CrownNeck", 
+	"Brow", 
+	"Bridge", 
+	"Nose",
+	"Muzzle", 
+	"Lip",
+	"Chin", 
+	"Inner Chin",
+	"Tongue",
+	"Ear C",
+	"Ear A", 
+	"Ear B", 
+	"Jowl Colour", 
+	"Muzzle Detail B Colour"
+	]
+
 const neoprene_shader : ShaderMaterial = preload('res://Materials/Decrypt Image Neoprene GLES2.material')
 const leather_shader : ShaderMaterial = preload('res://Materials/Decrypt Image Leather GLES2.material')
+const mesh_neoprene_shader : ShaderMaterial = preload('res://Materials/3D Material Neoprene.material')
+const mesh_leather_shader : ShaderMaterial = preload('res://Materials/3D Material Leather.material')
 
 const snaps_shader : ShaderMaterial = preload('res://Materials/Decrypt Image Snaps GLES2.material')
+const mesh_snaps_shader : ShaderMaterial = preload('res://Materials/3D Snaps.material')
 const snaps_groups = [
 	"face_snaps",
 	"back_eyelets",
 	"muzzle_eyelets"
 	]
 
-var body_colour : Color
+var body_colour : Vector3 = Vector3(0,0,1)
+const body_shader : ShaderMaterial = preload('res://Materials/Decrypt Image Base.material')
+const mesh_body_shader : ShaderMaterial = preload('res://Materials/3D Base.material')
 
-func _ready():
-	OS.min_window_size = Vector2(700, 400)
+onready var colours_popup = get_tree().get_nodes_in_group("Colours Popup")[0]
+onready var colour_picker = get_tree().get_nodes_in_group("Colour Picker")[0]
 
 var hood_type_change_node : Button
 func _hood_type_change(index):
 	hood_type_change_node._hood_style_selected(index)
-	
 
 func _change_colour(index, node_group):
 	_settings_changed(node_group, names.keys().find(index))
-	if node_group == "CrownNeck" or node_group == "Base":
-		if index == "Shiny":
-			for i in get_tree().get_nodes_in_group('1_2 Selection'):
-				i.text = "Shiny"
-			change_colour_base_crownneck(index)
-		else:
-			var a = false
-			var t = ""
-			for i in get_tree().get_nodes_in_group('1_2 Selection'):
-				if i.text == "Shiny":
-					a = true
-				else:
-					t = i.text
-			if a:
+	
+	match node_group:
+		"CrownNeck", "Base":
+			if index == "Shiny":
 				for i in get_tree().get_nodes_in_group('1_2 Selection'):
-					i.text = t
+					i.text = "Shiny"
 				change_colour_base_crownneck(index)
 			else:
-				change_texture(index, node_group)
-				global_update_selection_text(index, node_group)
-					
-	else:
-		change_texture(index, node_group)
-		global_update_selection_text(index, node_group)
+				var a = false
+				var t = ""
+				for i in get_tree().get_nodes_in_group('1_2 Selection'):
+					if i.text == "Shiny":
+						a = true
+					else:
+						t = i.text
+				if a:
+					for i in get_tree().get_nodes_in_group('1_2 Selection'):
+						i.text = t
+					change_colour_base_crownneck(index)
+				else:
+					change_texture(index, node_group)
+					global_update_selection_text(index, node_group)
+						
+		_:
+			change_texture(index, node_group)
+			global_update_selection_text(index, node_group)
 
 func change_colour_base_crownneck(index):
 	for i in ["CrownNeck", "Base"]:
@@ -290,19 +308,20 @@ func change_colour_base_crownneck(index):
 		_settings_changed(i, names.keys().find(index))
 
 func change_texture(index, node_group):
-	neoprene_shader.set_shader_param(node_group.replacen(" ", "_").to_lower(), textures[index][0])
-	leather_shader.set_shader_param(node_group.replacen(" ", "_").to_lower(), textures[index][1])
+	node_group = node_group.replacen(" ", "_").to_lower()
+	for n_shader in [neoprene_shader, mesh_neoprene_shader]:
+		n_shader.set_shader_param(node_group, textures[index][0])
+	for l_shader in [leather_shader, mesh_leather_shader]:
+		l_shader.set_shader_param(node_group, textures[index][1])
 
 func change_snaps_texture(index, node_group):
-	snaps_shader.set_shader_param(node_group.replacen(" ", "_").to_lower(), snaps_textures[index])
+	for s_shader in [snaps_shader, mesh_snaps_shader]:
+		s_shader.set_shader_param(node_group.replacen(" ", "_").to_lower(), index)
 
 func global_update_selection_text(index, node_group):
 	for i in get_tree().get_nodes_in_group(node_group):
 		if i.is_in_group("Colour Selection Button"):
-			if i.is_in_group("Leather"):
-				i.text = names[index][1]
-			else:
-				i.text = names[index][0]
+			i.text = names[index][1] if i.is_in_group("Leather") else names[index][0]
 
 const muzzle_length = ["Muzzle Short", "Muzzle Standard", "Muzzle Long"]
 
@@ -341,135 +360,152 @@ var muzzle_types = ["Frisky", "K9", "Puppy"]
 
 func change_hood(catagory : String, index : int, pressed : bool):
 	for i in get_tree().get_nodes_in_group("Preview"):
-		if catagory == "Eyeglass Slots" or catagory == "Ear Holes" or catagory == "Jowl":
-			if i.is_in_group(catagory):
-				i.visible = pressed
-		elif catagory == "Brow Style" and i.is_in_group("Brow Style"):
-			if i.is_in_group("Brow Double"):
-				i.visible = index != 0
-			elif i.is_in_group("Brow Single"):
-				i.visible = index == 0
-		elif catagory == "Muzzle Length":
-			if i.is_in_group("Muzzle Base"):
-				if !i.is_in_group("Puppy"):
-					if pressed:
-						if index == 0 and i.is_in_group("Leather"):
-							if i.is_in_group("Muzzle " + hood_options[9]):
+		match catagory:
+			"Eyeglass Slots":
+				if i.is_in_group(catagory):
+					i.visible = pressed
+				if i.is_in_group("3D Hood"):
+					i.set("blend_shapes/Eye Glass Slots", float(pressed))
+			"Ear Holes":
+				if i.is_in_group(catagory):
+					i.visible = pressed
+				if i.is_in_group("3D Hood"):
+					i.set("blend_shapes/Ear Holes", float(pressed))
+			"Jowl":
+				if i.is_in_group(catagory):
+					i.visible = pressed
+				if i.is_in_group("Adjust For Jowl"):
+					i.set("blend_shapes/Jowl", float(pressed))
+			"Brow Style":
+				if i.is_in_group("Brow Style"):
+					if i.is_in_group("Brow Double"):
+						i.visible = index != 0
+					elif i.is_in_group("Brow Single"):
+						i.visible = index == 0
+				elif i.is_in_group("3D Adjust For Brow"):
+					i.set("blend_shapes/Brow Double", float(index != 0))
+			"Muzzle Length":
+				if i.is_in_group("3D Muzzle"):
+					i.set("blend_shapes/Long", float(index == 2))
+					i.set("blend_shapes/Short", float(index == 0))
+				elif i.is_in_group("Muzzle Base"):
+					if !i.is_in_group("Puppy"):
+						if pressed:
+							if index == 0 and i.is_in_group("Leather"):
+								if i.is_in_group("Muzzle " + hood_options[9]):
+									i.visible = true
+								else:
+									i.visible = false
+							elif i.is_in_group("Muzzle " + hood_options[index + 8]):
 								i.visible = true
 							else:
 								i.visible = false
-						elif i.is_in_group("Muzzle " + hood_options[index + 8]):
-							i.visible = true
-						else:
-							i.visible = false
-		elif catagory == "Muzzle Detail B":
-			if !i.is_in_group("Hood Option Button"):
-				if i.is_in_group("Muzzle Detail B"):
-					if i.is_in_group("Leather") and (index == 0 or index == 4):
-						if i.is_in_group(hood_options[14]):
-							i.visible = true
-						else:
-							i.visible = false
-					elif i.is_in_group("Frisky") and index != 1:
-							if i.is_in_group(hood_options[17]):
+			"Muzzle Detail B":
+				if !i.is_in_group("Hood Option Button"):
+					if i.is_in_group("Muzzle Detail B"):
+						if i.is_in_group("Leather") and (index == 0 or index == 4):
+							if i.is_in_group(hood_options[14]):
 								i.visible = true
 							else:
 								i.visible = false
-					elif i.is_in_group(hood_options[index + 13] if index < 4 else hood_options[13]):
-						i.visible = true
-					else:
-						i.visible = false
-					
-		elif catagory == "Ear Style":
-			if i.is_in_group("Ear"):
-				if (i.is_in_group("Leather") and index != 1) or !i.is_in_group("Leather"):
-					if i.is_in_group(hood_options[index + 5] + " Ear"):
-						i.visible = true
-					else:
-						i.visible = false
-		elif catagory == "Muzzle Type":
-			if i.is_in_group("Muzzle Preview"):
-				i.visible = i.is_in_group(muzzle_types[index] + " Muzzle")
+						elif i.is_in_group("Frisky") and index != 1:
+								if i.is_in_group(hood_options[17]):
+									i.visible = true
+								else:
+									i.visible = false
+						elif i.is_in_group(hood_options[index + 13] if index < 4 else hood_options[13]):
+							i.visible = true
+						else:
+							i.visible = false
+						
+			"Ear Style":
+				if i.is_in_group("Ear"):
+					if (i.is_in_group("Leather") and index != 1) or !i.is_in_group("Leather"):
+						if i.is_in_group(hood_options[index + 5] + " Ear"):
+							i.visible = true
+						else:
+							i.visible = false
+			"Muzzle Type":
+				if i.is_in_group("Muzzle Preview"):
+					i.visible = i.is_in_group(muzzle_types[index] + " Muzzle")
 			
-		elif snap_node_groups.find(catagory) != -1:
-			if i.is_in_group("SnapsEyelets"):
-				change_snaps_texture(index, snaps_groups[snap_node_groups.find(catagory)])
+			_:
+				if snap_node_groups.find(catagory) != -1:
+					if i.is_in_group("SnapsEyelets"):
+						change_snaps_texture(index, snaps_groups[snap_node_groups.find(catagory)])
 
 var snap_colours = ["Snap Black", "Snap Silver", "Snap Brass"]
 func change_buttons(catagory : String, index : int, pressed : bool):
-	if catagory == "Jowl":
-		for i in get_tree().get_nodes_in_group("Jowl Colour"):
-			i.disabled = !pressed
-	elif catagory == "Muzzle Detail B":
-		for i in get_tree().get_nodes_in_group("Muzzle Detail B Colour"):
-			i.disabled = index < 2
+	match catagory:
+		"Jowl":
+			for i in get_tree().get_nodes_in_group("Jowl Colour"):
+				i.disabled = !pressed
+		"Muzzle Detail B":
+			for i in get_tree().get_nodes_in_group("Muzzle Detail B Colour"):
+				i.disabled = index < 2
 	for i in get_tree().get_nodes_in_group("Hood Option Button"):
 		if i.is_in_group("Preview"):
 			if i.node_group == catagory:
-				if catagory == "Eyeglass Slots" or catagory == "Ear Holes" or catagory == "Jowl":
-					i.text = "Yes" if pressed else "No"
-				elif catagory == "Brow Style":
-					i.text = "Single" if index == 0 else "Double"
-				elif catagory == "Muzzle Length":
-					if (i.is_in_group("Leather") and index == 0):
-						i.text = hood_options[9]
-					else:
-						i.text = hood_options[index + 8]
-				elif catagory == "Muzzle Detail B":
-					if i.is_in_group("Leather") :
-						if (index == 0 or index == 4): 
-							i.text = hood_options[14]
-							for ii in get_tree().get_nodes_in_group('Muzzle Eyelets'):
-								ii.show()
-							for ii in get_tree().get_nodes_in_group('Muzzle Detail B Colour'):
-								if ii.is_in_group('Leather') and ii.is_in_group('Colour Selection Button'):
-									ii.hide()
+				match catagory:
+					"Eyeglass Slots", "Ear Holes", "Jowl":
+						i.text = "Yes" if pressed else "No"
+					"Brow Style":
+						i.text = "Single" if index == 0 else "Double"
+					"Muzzle Length":
+						if (i.is_in_group("Leather") and index == 0):
+							i.text = hood_options[9]
 						else:
-							i.text = hood_options[13 + index]
-							for ii in get_tree().get_nodes_in_group('Muzzle Eyelets'):
-									ii.visible = index == 1
-							for ii in get_tree().get_nodes_in_group('Muzzle Detail B Colour'):
-								if ii.is_in_group('Leather') and ii.is_in_group('Colour Selection Button'):
-									ii.visible = index != 1
-					elif (i.is_in_group("Frisky") and index != 1):
-						i.text = hood_options[17]
-					else:
-						i.text = hood_options[index + 13] if index < 4 else hood_options[13]
+							i.text = hood_options[index + 8]
+					"Muzzle Detail B":
+						if i.is_in_group("Leather") :
+							if (index == 0 or index == 4): 
+								i.text = hood_options[14]
+								for ii in get_tree().get_nodes_in_group('Muzzle Eyelets'):
+									ii.show()
+								for ii in get_tree().get_nodes_in_group('Muzzle Detail B Colour'):
+									if ii.is_in_group('Leather') and ii.is_in_group('Colour Selection Button'):
+										ii.hide()
+							else:
+								i.text = hood_options[13 + index]
+								for ii in get_tree().get_nodes_in_group('Muzzle Eyelets'):
+										ii.visible = index == 1
+								for ii in get_tree().get_nodes_in_group('Muzzle Detail B Colour'):
+									if ii.is_in_group('Leather') and ii.is_in_group('Colour Selection Button'):
+										ii.visible = index != 1
+						elif (i.is_in_group("Frisky") and index != 1):
+							i.text = hood_options[17]
+						else:
+							i.text = hood_options[index + 13] if index < 4 else hood_options[13]
 						
-				elif catagory == "Ear Style":
-					if (i.is_in_group("Leather") and index != 1) or !i.is_in_group("Leather"):
-						i.text = hood_options[index + 5]
-				elif catagory == "Muzzle Type":
-					if i.is_in_group("Muzzle Type Button"):
-						i.text = muzzle_types[index]
-						for ii in get_tree().get_nodes_in_group("Muzzle Options"):
-							ii.visible = ii.is_in_group(muzzle_types[index] + " Options")
-				
-				elif snap_node_groups.find(catagory) != -1:
-					if i.is_in_group(catagory):
-						if i.is_in_group("Circle Button"):
-							if i.is_in_group(snap_colours[index]):
-								i.pressed = true
-						else:
-							i.text = hood_options[index]
+					"Ear Style":
+						if (i.is_in_group("Leather") and index != 1) or !i.is_in_group("Leather"):
+							i.text = hood_options[index + 5]
+					"Muzzle Type":
+						if i.is_in_group("Muzzle Type Button"):
+							i.text = muzzle_types[index]
+							for ii in get_tree().get_nodes_in_group("Muzzle Options"):
+								ii.visible = ii.is_in_group(muzzle_types[index] + " Options")
+					_:
+						if snap_node_groups.find(catagory) != -1:
+							if i.is_in_group(catagory):
+								i.text = hood_options[index]
 		else:
 			if i.catagory == catagory:
-				
 				if i.button_index == index:
 					i.pressed = pressed
-				if catagory == "Muzzle Length":
-					if (i.is_in_group("Leather") and index == 0) and i.button_index == 1:
-						i.pressed = true
-				elif catagory == "Muzzle Detail B":
-					if i.is_in_group("Frisky"):
-						if i.is_in_group("4 Holes"):
-							i.visible = index == 1
-					else:
-						if index == 4:
-							if i.button_index == 0:
-								i.pressed = true
+				match catagory:
+					"Muzzle Length":
+						if (i.is_in_group("Leather") and index == 0) and i.button_index == 1:
+							i.pressed = true
+					"Muzzle Detail B":
+						if i.is_in_group("Frisky"):
+							if i.is_in_group("4 Holes"):
+								i.visible = index == 1
+						else:
+							if index == 4:
+								if i.button_index == 0:
+									i.pressed = true
 
-var allow_generate_code = true
 func _settings_changed(catagory : String, index : int):
 	if !HoodCodeManager.neoprene_colour_groups.has(catagory):
 		HoodCodeManager.settings[HoodCodeManager.node_groups.find(catagory)] = index

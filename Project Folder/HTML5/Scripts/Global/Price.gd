@@ -2,13 +2,13 @@ extends Node
 
 var hood_prices = {
 	"Neoprne Frisky": {
-		"Base" : 159.95,
+		"Base" : 149.95,
 		"Eyeglass Slots" : 5,
 		"Jowl" : 10,
 		"Eyelets" : 10
 		},
 	"Neoprene K9": {
-		"Base" : 179.95,
+		"Base" : 149.95,
 		"Eyeglass Slots" : 5,
 		"Jowl" : 10,
 		"Eyelets" : 10,
@@ -16,7 +16,7 @@ var hood_prices = {
 		"Fur" : 20
 		},
 	"Neoprene Puppy": {
-		"Base" : 139.95,
+		"Base" : 99.95,
 		"Eyeglass Slots" : 5
 		},
 	"Neoprene Woof": {
@@ -24,18 +24,18 @@ var hood_prices = {
 		},
 	"Muzzle": {
 		"Frisky" : {
-			"Base" : 59.95,
+			"Base" : 49.95,
 			"Jowl" : 10,
 			"Eyelets" : 10,
 			},
 		"K9" : {
-			"Base" : 54.95,
+			"Base" : 47.95,
 			"Jowl" : 10,
 			"Whiskers" : 10,
 			"Fur" : 10
 			},
 		"Puppy" : {
-			"Base" : 44.95
+			"Base" : 42.95
 			},
 		},
 	"Leather K9": {

@@ -1,5 +1,12 @@
 extends Node
 
+func _smart_divide(val1 : float, val2 : float):
+	match val1:
+		0.0:
+			return 0
+		_:
+			return val1 / val2
+
 static func string_to_array(num_string : String = "0"):
 	var num_array : PoolIntArray
 	for i in num_string.length():

@@ -1,0 +1,537 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Materials/Decrypt Image Leather GLES2.material" type="Material" id=1]
+[ext_resource path="res://Assets/Option Selector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Leather Colour Selector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Textures/Leather K9/HT238C Leather K9 Order Form 05.31.23.png" type="Texture" id=4]
+[ext_resource path="res://Materials/Decrypt Image Snaps GLES2.material" type="Material" id=5]
+[ext_resource path="res://Textures/Leather K9/Leather Form Snaps.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Textures/Leather K9/LowResLeatherK9Form.png" type="Texture" id=9]
+[ext_resource path="res://Textures/Check.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/Barlow/Barlow-Medium.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Assets/Form TickBox.tscn" type="PackedScene" id=43]
+
+[sub_resource type="ButtonGroup" id=47]
+
+[sub_resource type="StyleBoxTexture" id=81]
+texture = ExtResource( 10 )
+region_rect = Rect2( -25, -25, 140, 140 )
+
+[sub_resource type="DynamicFont" id=103]
+size = 48
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxEmpty" id=98]
+
+[sub_resource type="StyleBoxEmpty" id=99]
+
+[sub_resource type="StyleBoxFlat" id=100]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=101]
+content_margin_left = 10.0
+content_margin_right = 4.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=102]
+
+[sub_resource type="Theme" id=104]
+default_font = SubResource( 103 )
+Button/colors/font_color = Color( 0, 0, 0, 1 )
+Button/colors/font_color_disabled = Color( 0, 0, 0, 0.2 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 1 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 103 )
+Button/styles/disabled = SubResource( 98 )
+Button/styles/focus = SubResource( 99 )
+Button/styles/hover = SubResource( 100 )
+Button/styles/normal = SubResource( 101 )
+Button/styles/pressed = SubResource( 102 )
+
+[sub_resource type="StyleBoxEmpty" id=105]
+
+[sub_resource type="StyleBoxEmpty" id=106]
+
+[sub_resource type="StyleBoxEmpty" id=62]
+
+[sub_resource type="StyleBoxEmpty" id=107]
+
+[sub_resource type="ButtonGroup" id=46]
+
+[sub_resource type="ButtonGroup" id=110]
+
+[sub_resource type="ButtonGroup" id=113]
+
+[sub_resource type="ButtonGroup" id=122]
+
+[node name="Leather Form" type="Node2D"]
+
+[node name="ColorRect" type="TextureRect" parent="."]
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 4400.0
+margin_bottom = 3400.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Snaps" type="TextureRect" parent="ColorRect"]
+material = ExtResource( 5 )
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource( 6 )
+
+[node name="Preview Colour Selector" parent="ColorRect" instance=ExtResource( 8 )]
+texture = ExtResource( 9 )
+is_leather = true
+top_layer = true
+
+[node name="Small" parent="ColorRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 414.0
+margin_top = 770.0
+margin_right = 506.0
+margin_bottom = 862.0
+size_flags_horizontal = 1
+group = SubResource( 47 )
+catagory = "Hood Size"
+
+[node name="Medium" parent="ColorRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 414.0
+margin_top = 894.0
+margin_right = 506.0
+margin_bottom = 986.0
+size_flags_horizontal = 1
+pressed = true
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 1
+
+[node name="Large" parent="ColorRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 414.0
+margin_top = 1012.0
+margin_right = 506.0
+margin_bottom = 1104.0
+size_flags_horizontal = 1
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 2
+
+[node name="XLarge" parent="ColorRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 413.0
+margin_top = 1136.0
+margin_right = 505.0
+margin_bottom = 1228.0
+size_flags_horizontal = 1
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 3
+
+[node name="XXLarge" parent="ColorRect" groups=["Hood Size"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 413.0
+margin_top = 1256.0
+margin_right = 505.0
+margin_bottom = 1348.0
+size_flags_horizontal = 1
+group = SubResource( 47 )
+catagory = "Hood Size"
+button_index = 4
+
+[node name="Eyeglass Slots" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 201.0
+margin_top = 1442.0
+margin_right = 293.0
+margin_bottom = 1534.0
+custom_styles/pressed = SubResource( 81 )
+catagory = "Eyeglass Slots"
+
+[node name="Ear Holes" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1055.0
+margin_top = 1443.0
+margin_right = 1147.0
+margin_bottom = 1535.0
+custom_styles/pressed = SubResource( 81 )
+catagory = "Ear Holes"
+
+[node name="Hood Base" parent="ColorRect" groups=["1_2 Selection", "Base", "Colour Selection Button", "Leather"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1599.0
+margin_right = 1282.0
+margin_bottom = 1693.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "Base"
+
+[node name="CrownNeck" parent="ColorRect" groups=["1_2 Selection", "Colour Selection Button", "CrownNeck", "Leather"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1710.0
+margin_right = 1282.0
+margin_bottom = 1804.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "CrownNeck"
+
+[node name="Brow" parent="ColorRect" groups=["Brow", "Colour Selection Button", "Leather"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1821.0
+margin_right = 1282.0
+margin_bottom = 1915.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+node_group = "Brow"
+
+[node name="Bridge" parent="ColorRect" groups=["Bridge", "Colour Selection Button", "Leather"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 1932.0
+margin_right = 1282.0
+margin_bottom = 2026.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+node_group = "Bridge"
+
+[node name="Nose" parent="ColorRect" groups=["Colour Selection Button", "Leather", "Nose"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 2043.0
+margin_right = 1282.0
+margin_bottom = 2137.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "Nose"
+
+[node name="Muzzle" parent="ColorRect" groups=["Colour Selection Button", "Leather", "Muzzle"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 2160.0
+margin_right = 1282.0
+margin_bottom = 2254.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+node_group = "Muzzle"
+
+[node name="Chin" parent="ColorRect" groups=["Chin", "Colour Selection Button", "Leather"] instance=ExtResource( 3 )]
+margin_left = 882.0
+margin_top = 2271.0
+margin_right = 1282.0
+margin_bottom = 2365.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "Chin"
+
+[node name="Colour selection8" parent="ColorRect" groups=["Colour Selection Button", "Ear A", "Leather"] instance=ExtResource( 3 )]
+margin_left = 555.0
+margin_top = 2691.0
+margin_right = 955.0
+margin_bottom = 2785.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+node_group = "Ear A"
+
+[node name="Colour selection9" parent="ColorRect" groups=["Colour Selection Button", "Ear B", "Leather"] instance=ExtResource( 3 )]
+margin_left = 1082.0
+margin_top = 2691.0
+margin_right = 1482.0
+margin_bottom = 2785.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "Ear B"
+
+[node name="Colour selection10" parent="ColorRect" groups=["Colour Selection Button", "Ear C", "Leather"] instance=ExtResource( 3 )]
+margin_left = 555.0
+margin_top = 2785.0
+margin_right = 955.0
+margin_bottom = 2879.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "Ear C"
+
+[node name="Colour selection11" parent="ColorRect" groups=["Colour Selection Button", "Jowl Colour", "Leather"] instance=ExtResource( 3 )]
+margin_left = 539.0
+margin_top = 2965.0
+margin_right = 939.0
+margin_bottom = 3059.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+node_group = "Jowl Colour"
+
+[node name="Colour selection12" parent="ColorRect" groups=["Colour Selection Button", "Leather", "Muzzle Detail B"] instance=ExtResource( 3 )]
+margin_left = 539.0
+margin_top = 3052.0
+margin_right = 939.0
+margin_bottom = 3146.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+node_group = "Muzzle Detail B"
+
+[node name="Length Standard" parent="ColorRect" groups=["Leather"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3421.0
+margin_top = 2385.0
+margin_right = 3513.0
+margin_bottom = 2477.0
+size_flags_horizontal = 1
+pressed = true
+group = SubResource( 46 )
+catagory = "Muzzle Length"
+button_index = 1
+
+[node name="Length Long" parent="ColorRect" groups=["Leather"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3879.0
+margin_top = 2386.0
+margin_right = 3971.0
+margin_bottom = 2478.0
+size_flags_horizontal = 1
+group = SubResource( 46 )
+catagory = "Muzzle Length"
+button_index = 2
+
+[node name="Snaps2" parent="ColorRect" instance=ExtResource( 2 )]
+margin_left = 882.0
+margin_top = 2382.0
+margin_right = 1282.0
+margin_bottom = 2476.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Snaps"
+
+[node name="Eyelets" parent="ColorRect/Snaps2/Popup/PanelContainer/VBoxContainer" index="0"]
+visible = true
+
+[node name="Lacing Eyelets" parent="ColorRect" instance=ExtResource( 2 )]
+margin_left = 882.0
+margin_top = 2494.0
+margin_right = 1282.0
+margin_bottom = 2588.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Lacing Eyelets"
+
+[node name="Eyelets" parent="ColorRect/Lacing Eyelets/Popup/PanelContainer/VBoxContainer" index="0"]
+visible = true
+
+[node name="Muzzle Eyelets" parent="ColorRect" instance=ExtResource( 2 )]
+margin_left = 1082.0
+margin_top = 2963.0
+margin_right = 1482.0
+margin_bottom = 3057.0
+rect_min_size = Vector2( 400, 0 )
+theme = SubResource( 104 )
+custom_styles/hover = SubResource( 105 )
+custom_styles/pressed = SubResource( 106 )
+custom_styles/disabled = SubResource( 62 )
+custom_styles/normal = SubResource( 107 )
+text = "Black"
+__meta__ = {
+"_editor_description_": ""
+}
+node_group = "Muzzle Eyelets"
+
+[node name="Eyelets" parent="ColorRect/Muzzle Eyelets/Popup/PanelContainer/VBoxContainer" index="0"]
+visible = true
+
+[node name="Single Brow" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3826.0
+margin_top = 1094.0
+margin_right = 3918.0
+margin_bottom = 1186.0
+size_flags_horizontal = 1
+group = SubResource( 110 )
+catagory = "Brow"
+
+[node name="Double Brow" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3817.0
+margin_top = 1699.0
+margin_right = 3909.0
+margin_bottom = 1791.0
+size_flags_horizontal = 1
+pressed = true
+group = SubResource( 110 )
+catagory = "Brow"
+button_index = 1
+
+[node name="Standard Ear" parent="ColorRect" groups=["Ear Style", "Leather"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1988.0
+margin_top = 1977.0
+margin_right = 2080.0
+margin_bottom = 2070.0
+size_flags_horizontal = 1
+pressed = true
+group = SubResource( 113 )
+catagory = "Ear Style"
+
+[node name="Pointed Ear" parent="ColorRect" groups=["Ear Style", "Leather"] instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2558.0
+margin_top = 1977.0
+margin_right = 2650.0
+margin_bottom = 2070.0
+size_flags_horizontal = 1
+group = SubResource( 113 )
+catagory = "Ear Style"
+button_index = 2
+
+[node name="Control25" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2005.0
+margin_top = 3057.0
+margin_right = 2097.0
+margin_bottom = 3149.0
+size_flags_horizontal = 1
+catagory = "Jowl"
+
+[node name="Control26" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 2682.0
+margin_top = 3057.0
+margin_right = 2774.0
+margin_bottom = 3149.0
+size_flags_horizontal = 1
+pressed = true
+group = SubResource( 122 )
+catagory = "Muzzle Detail B"
+button_index = 1
+
+[node name="Control27" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3202.0
+margin_top = 3056.0
+margin_right = 3294.0
+margin_bottom = 3148.0
+size_flags_horizontal = 1
+group = SubResource( 122 )
+catagory = "Muzzle Detail B"
+button_index = 2
+
+[node name="Control28" parent="ColorRect" instance=ExtResource( 43 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3718.0
+margin_top = 3057.0
+margin_right = 3810.0
+margin_bottom = 3149.0
+size_flags_horizontal = 1
+group = SubResource( 122 )
+catagory = "Muzzle Detail B"
+button_index = 3
+
+[editable path="ColorRect/Snaps2"]
+[editable path="ColorRect/Lacing Eyelets"]
+[editable path="ColorRect/Muzzle Eyelets"]

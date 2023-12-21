@@ -20,12 +20,12 @@ anti_aliasing = false
 
 [sub_resource type="StyleBoxEmpty" id=58]
 
-[sub_resource type="StyleBoxFlat" id=59]
+[sub_resource type="StyleBoxFlat" id=172]
 content_margin_left = 10.0
 content_margin_right = 4.0
 content_margin_top = 4.0
 content_margin_bottom = 4.0
-bg_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+bg_color = Color( 0.77, 0.77, 0.77, 1 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -67,6 +67,6 @@ Button/constants/hseparation = 2
 Button/fonts/font = SubResource( 56 )
 Button/styles/disabled = SubResource( 57 )
 Button/styles/focus = SubResource( 58 )
-Button/styles/hover = SubResource( 59 )
+Button/styles/hover = SubResource( 172 )
 Button/styles/normal = SubResource( 55 )
 Button/styles/pressed = SubResource( 60 )

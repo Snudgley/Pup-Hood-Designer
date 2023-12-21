@@ -1,8 +1,12 @@
 shader_type canvas_item;
 
-uniform sampler2D face_snaps: hint_albedo;
-uniform sampler2D back_eyelets: hint_albedo;
-uniform sampler2D muzzle_eyelets: hint_albedo;
+uniform int face_snaps;
+uniform int back_eyelets;
+uniform int muzzle_eyelets;
+
+const vec3 Black = vec3(0.0, 0.0, 0.0);
+const vec3 Brass = vec3(0.88671875, 0.66796875, 0.28125);
+const vec3 Silver = vec3(0.74609375, 0.74609375, 0.74609375);
 
 uniform bool original_texture;
 uniform bool export;
@@ -14,6 +18,17 @@ const float e = 1.0e-10; //0.0000000001
 const vec4 K_S = vec4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
 const vec4 K_C = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
 
+vec3 output_colour(int colour, vec2 UV_multiplied_by_Stretch) {
+	if (colour == 0){
+		return Black;
+	} 
+	else if (colour == 1){
+		return Silver;
+	}
+	else if (colour == 2){
+		return Brass;
+	}
+}
 
 void fragment() {
 	if (original_texture){
@@ -21,6 +36,8 @@ void fragment() {
 	}
 	else {
 		vec4 image = texture(TEXTURE, UV);
+		
+		vec2 UV_multiplied_by_Stretch = UV;
 		
 		float image_hue;
 		float image_saturation;
@@ -48,9 +65,7 @@ void fragment() {
 			
 			if(abs(image_hue) < hue_threshold)
 			{
-				vec2 texture_size = vec2(512,512);
-				vec2 uv_stretch = base_size / texture_size;
-				vec3 c = texture(face_snaps, UV * uv_stretch).rgb;
+				vec3 c = output_colour(face_snaps, UV_multiplied_by_Stretch);
 				vec4 p = mix(vec4(c.bg, K_S.wz), vec4(c.gb, K_S.xy), step(c.b, c.g));
 				vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
 				float d = q.x - min(q.w, q.y);
@@ -58,9 +73,7 @@ void fragment() {
 			}
 			else if(abs(image_hue - ((1.0 / number_of_parts) * 1.0)) < hue_threshold)
 			{
-				vec2 texture_size = vec2(512,512);
-				vec2 uv_stretch = base_size / texture_size;
-				vec3 c = texture(back_eyelets, UV * uv_stretch).rgb;
+				vec3 c = output_colour(back_eyelets, UV_multiplied_by_Stretch);
 				vec4 p = mix(vec4(c.bg, K_S.wz), vec4(c.gb, K_S.xy), step(c.b, c.g));
 				vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
 				float d = q.x - min(q.w, q.y);
@@ -68,9 +81,7 @@ void fragment() {
 			}
 			else if(abs(image_hue - ((1.0 / number_of_parts) * 2.0)) < hue_threshold)
 			{
-				vec2 texture_size = vec2(512,512);
-				vec2 uv_stretch = base_size / texture_size;
-				vec3 c = texture(muzzle_eyelets, UV * uv_stretch).rgb;
+				vec3 c = output_colour(muzzle_eyelets, UV_multiplied_by_Stretch);
 				vec4 p = mix(vec4(c.bg, K_S.wz), vec4(c.gb, K_S.xy), step(c.b, c.g));
 				vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
 				float d = q.x - min(q.w, q.y);

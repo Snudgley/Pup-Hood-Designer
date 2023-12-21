@@ -1,0 +1,201 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Materials/Decrypt Image Neoprene GLES2.material" type="Material" id=1]
+[ext_resource path="res://Assets/Preview Image Colour Selector.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Materials/Designer Colour Picker.theme" type="Theme" id=3]
+[ext_resource path="res://Textures/Frisky/Preview/Base.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Frisky/Preview/Double Brows.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Frisky/Preview/Body.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Frisky/Preview/Standard Ear.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Frisky/Preview/Floppy Ear.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Frisky/Preview/Single Brows.png" type="Texture" id=9]
+[ext_resource path="res://Materials/Decrypt Image Base.material" type="Material" id=10]
+[ext_resource path="res://Textures/Frisky/Preview/Pointed Ear.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Jowl.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Base.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Frisky/Preview/Eyeglass Slots.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Frisky/Preview/Jowl.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Frisky/Preview/Ear Holes.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Pointed Ear.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Standard Ear.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Frisky/Preview/Muzzle 4 Holes.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Single Brows.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Frisky/Preview/LowRes/Floppy Ear.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Frisky/Preview/Muzzle Eyelets.png" type="Texture" id=23]
+
+[node name="Frisky 2D" type="TextureRect" groups=["Neoprene Frisky Hood"]]
+material = ExtResource( 10 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Base" type="TextureRect" parent="."]
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Ear Holes" type="TextureRect" parent="Base" groups=["Ear Holes", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 6
+
+[node name="Eyeglass Slots" type="TextureRect" parent="Base" groups=["Eyeglass Slots", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+
+[node name="Brow" type="Control" parent="Base"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Double" type="TextureRect" parent="Base/Brow" groups=["Brow", "Brow Double", "Brow Style", "Preview"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="Single" type="TextureRect" parent="Base/Brow" groups=["Brow", "Brow Single", "Brow Style", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="Ears" type="Control" parent="Base"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Standard" type="TextureRect" parent="Base/Ears" groups=["Ear", "Preview", "Standard Ear"]]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="Pointed" type="TextureRect" parent="Base/Ears" groups=["Ear", "Pointed Ear", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 6
+
+[node name="Floppy" type="TextureRect" parent="Base/Ears" groups=["Ear", "Floppy Ear", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Muzzle Extra" type="Control" parent="Base"]
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Eyelets" type="TextureRect" parent="Base/Muzzle Extra" groups=["Eyelets", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 6
+
+[node name="4 Holes" type="TextureRect" parent="Base/Muzzle Extra" groups=["4 Holes", "Frisky", "Muzzle Detail B", "Muzzle Standard", "Preview"]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 6
+
+[node name="Jowl" type="TextureRect" parent="Base/Muzzle Extra" groups=["Jowl", "Preview"]]
+visible = false
+use_parent_material = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 6
+
+[node name="Preview Colour Selector" parent="." instance=ExtResource( 2 )]
+theme = ExtResource( 3 )
+texture = ExtResource( 14 )
+
+[node name="Single Brow" parent="Preview Colour Selector" groups=["Brow", "Brow Single", "Brow Style", "Preview"] instance=ExtResource( 2 )]
+visible = false
+focus_next = NodePath("..")
+theme = ExtResource( 3 )
+texture = ExtResource( 21 )
+
+[node name="Floppy Ear" parent="Preview Colour Selector" groups=["Ear", "Floppy Ear", "Preview"] instance=ExtResource( 2 )]
+visible = false
+focus_next = NodePath("../Single Brow")
+theme = ExtResource( 3 )
+texture = ExtResource( 22 )
+
+[node name="Pointed Ear" parent="Preview Colour Selector" groups=["Ear", "Pointed Ear", "Preview"] instance=ExtResource( 2 )]
+visible = false
+focus_next = NodePath("../Floppy Ear")
+theme = ExtResource( 3 )
+texture = ExtResource( 18 )
+
+[node name="Standard Ear" parent="Preview Colour Selector" groups=["Ear", "Preview", "Standard Ear"] instance=ExtResource( 2 )]
+focus_next = NodePath("../Pointed Ear")
+theme = ExtResource( 3 )
+texture = ExtResource( 19 )
+
+[node name="Jowl" parent="Preview Colour Selector" groups=["Jowl", "Preview"] instance=ExtResource( 2 )]
+visible = false
+focus_next = NodePath("../Standard Ear")
+theme = ExtResource( 3 )
+texture = ExtResource( 13 )
+top_layer = true
